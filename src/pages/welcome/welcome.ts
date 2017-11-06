@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {ShowListPage} from '../show-list/show-list';
+import {ProfilePage} from '../profile/profile';
 
 @Component({
     selector: 'page-welcome',
@@ -18,5 +19,9 @@ export class WelcomePage {
 
     openShowList() {
         this.navCtrl.push(ShowListPage);
+    }
+
+    openProfilePage() {
+        this.navCtrl.push(ProfilePage);
     }
 }
