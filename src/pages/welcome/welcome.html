@@ -3,31 +3,31 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>I love animals, do you love animals too ?</ion-title>
+        <ion-title>Pet Sitters</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content no-bounce>
     <ion-slides>
         <ion-slide style="background-image: url('assets/img/slide_1.jpg');">
-            <p>Pet Sitters is THE app for all pet owners</p>
-            <ion-buttons start>
-                <button ion-button large>Voir les demandes</button>
-                <button ion-button large>Voir les offres</button>
-                <button ion-button large>Paramètres du compte</button>
-            </ion-buttons>
+            <p>Pet Sitters is THE app for all pet owners<br />
+                <button ion-button large (click)="openShowList()">
+                Set up my profile
+                </button>
         </ion-slide>
 
         <ion-slide style="background-image: url('assets/img/slide_2.jpg')">
-            <p>Find the best pet sitters around you</p>
-
+            <p>Find the best pet sitters around you<br />
+                <button ion-button large (click)="openShowList()">
+                Find a pet sitter
+                </button>
         </ion-slide>
 
         <ion-slide style="background-image: url('assets/img/slide_3.jpg')">
             <p>
-                Learn how to code with HackX! <br />
-                <button ion-button (click)="openShowList()">
-                    Start
+                Make some money by helping your neighbors !<br />
+                <button ion-button large (click)="openShowList()">
+                Start pet sitting
                 </button>
             </p>
         </ion-slide>

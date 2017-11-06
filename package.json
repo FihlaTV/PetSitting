@@ -27,7 +27,13 @@
     "leaflet": "^1.0.3",
     "rxjs": "5.1.1",
     "sw-toolbox": "3.4.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "ionic-plugin-keyboard": "~2.2.1",
+    "cordova-plugin-whitelist": "1.3.1",
+    "cordova-plugin-console": "1.0.5",
+    "cordova-plugin-statusbar": "2.2.1",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-splashscreen": "~4.0.1"
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.3.0",
@@ -49,5 +55,15 @@
       "locator": "ios"
     }
   ],
-  "description": "showtonight sample app"
+  "description": "showtonight sample app",
+  "cordova": {
+    "plugins": {
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {}
+    }
+  }
 }
