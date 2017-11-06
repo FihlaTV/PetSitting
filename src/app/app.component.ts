@@ -7,6 +7,7 @@ import {ShowListPage} from '../pages/show-list/show-list';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
+import {ProfilePage} from '../pages/profile/profile';
 
 export interface MenuItem {
     title: string;
@@ -30,12 +31,13 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Shows', component: ShowListPage, icon: 'bonfire'},
-            {title: 'Favorites', component: FavoriteListPage, icon: 'star'}
+            {title: 'Find a pet sitter', component: ShowListPage, icon: 'contacts'},
+            {title: 'Start pet sitting', component: FavoriteListPage, icon: 'happy'}
         ];
 
         this.helpMenuItems = [
             {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
+            {title: 'Profile', component: ProfilePage, icon: 'contact'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 

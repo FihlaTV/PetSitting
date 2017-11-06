@@ -9,6 +9,7 @@ import {ShowListPage} from '../pages/show-list/show-list';
 import {ShowDetailPage} from '../pages/show-detail/show-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {AboutPage} from '../pages/about/about';
+import {ProfilePage} from '../pages/profile/profile';
 
 import {ShowService} from "../providers/show-service-rest";
 
@@ -20,11 +21,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
+    ProfilePage,
     ShowListPage,
     ShowDetailPage,
     FavoriteListPage
   ],
-  imports: [
+  imports: [  
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
+    ProfilePage,
     ShowListPage,
     ShowDetailPage,
     FavoriteListPage
