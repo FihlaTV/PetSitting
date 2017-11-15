@@ -10,6 +10,11 @@ import leaflet from 'leaflet';
 })
 export class ShowListPage {
 
+    public event = {
+    month: '1990-02-19',
+    timeStarts: '19:45',
+    timeEnds: '23:30'}
+
     shows: Array<any>;
     showsForSearch: Array<any>;
     searchKey: string = "";

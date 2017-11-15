@@ -21,14 +21,71 @@
                 <h2>{{show.name}}</h2>
                 <p>{{show.date}}</p>
             </button>
-            <ion-item-options>
-                <button danger (click)="deleteItem(show)">Delete</button>
-            </ion-item-options>
         </ion-item-sliding>
 
     </ion-list>
 
-    <div *ngIf="viewMode==='map'" style="width:100%;height:100%;" id="map"></div>
+    <div *ngIf="viewMode==='map'" padding class="profile-info">
+
+        <h4>Create your advert</h4>
+
+            <ion-list>
+
+            <ion-list radio-group [(ngModel)]="relationship">
+                <ion-item>
+                    <ion-label>I am looking for a pet sitter</ion-label>
+                    <ion-radio value="looking" checked></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>I want to offer my services as a pet sitter</ion-label>
+                    <ion-radio value="offering"></ion-radio>
+                </ion-item>
+
+            </ion-list>
+
+            <ion-item>
+                <ion-label stacked>Pet ID</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Start Time</ion-label>
+                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+            </ion-item>
+
+             <ion-item>
+                <ion-label stacked>End Time</ion-label>
+                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeEnds"></ion-datetime>
+            </ion-item>
+                       
+            <ion-item>
+                <ion-label stacked>Address</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Price</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Phone Number</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Address</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <button ion-button large >
+            Create
+            </button>
+
+        </ion-list>
+
+    </div>
 
 </ion-content>
 
@@ -37,8 +94,8 @@
         <ion-segment-button value="list">
             <ion-icon name="list"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="map" (ionSelect)="showMap()">
-            <ion-icon name="map"></ion-icon>
+        <ion-segment-button value="map">
+            <ion-icon name="add"></ion-icon>
         </ion-segment-button>
     </ion-segment>
 </ion-footer>
