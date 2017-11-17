@@ -3,11 +3,14 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {ShowListPage} from '../pages/show-list/show-list';
-import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
-import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
+import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
+import {AdvertListPage} from '../pages/advert-list/advert-list';
+import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
+import {PetPage} from '../pages/pet/pet';
 import {ProfilePage} from '../pages/profile/profile';
+import {WelcomePage} from '../pages/welcome/welcome';
+
 
 export interface MenuItem {
     title: string;
@@ -31,7 +34,7 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Find a pet sitter', component: ShowListPage, icon: 'contacts'},
+            {title: 'Find a pet sitter', component: AdvertListPage, icon: 'contacts'},
             {title: 'Start pet sitting', component: FavoriteListPage, icon: 'happy'}
         ];
 

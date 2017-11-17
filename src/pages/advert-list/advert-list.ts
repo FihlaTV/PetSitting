@@ -27,7 +27,7 @@ export class AdvertListPage {
     }
 
     openAdvertDetail(advert: any) {
-        this.navCtrl.push(advertDetailPage, advert);
+        this.navCtrl.push(AdvertDetailPage, advert);
     }
 
     onInput(event) {

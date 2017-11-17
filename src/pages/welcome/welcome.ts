@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
-import {ShowListPage} from '../show-list/show-list';
+import {AdvertListPage} from '../advert-list/advert-list';
 import {ProfilePage} from '../profile/profile';
 
 @Component({
@@ -17,8 +17,8 @@ export class WelcomePage {
       this.slides.pager = true;
     }
 
-    openShowList() {
-        this.navCtrl.push(ShowListPage);
+    openAdvertList() {
+        this.navCtrl.push(AdvertListPage);
     }
 
     openProfilePage() {

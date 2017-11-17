@@ -4,14 +4,15 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import {WelcomePage} from '../pages/welcome/welcome';
-import {ShowListPage} from '../pages/show-list/show-list';
-import {ShowDetailPage} from '../pages/show-detail/show-detail';
-import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {AboutPage} from '../pages/about/about';
+import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
+import {AdvertListPage} from '../pages/advert-list/advert-list';
+import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
+import {PetPage} from '../pages/pet/pet';
 import {ProfilePage} from '../pages/profile/profile';
+import {WelcomePage} from '../pages/welcome/welcome';
 
-import {ShowService} from "../providers/show-service-rest";
+import {AdvertService} from "../providers/advert-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,12 +20,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    WelcomePage,
     AboutPage,
+    AdvertListPage,
+    AdvertDetailPage,
+    FavoriteListPage,
+    PetPage,
     ProfilePage,
-    ShowListPage,
-    ShowDetailPage,
-    FavoriteListPage
+    WelcomePage,
   ],
   imports: [  
     BrowserModule,
@@ -34,17 +36,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    WelcomePage,
     AboutPage,
+    AdvertListPage,
+    AdvertDetailPage,
+    FavoriteListPage,
+    PetPage,
     ProfilePage,
-    ShowListPage,
-    ShowDetailPage,
-    FavoriteListPage
+    WelcomePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ShowService,
+    AdvertService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

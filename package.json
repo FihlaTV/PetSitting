@@ -1,7 +1,7 @@
 {
-  "name": "showtonight",
+  "name": "petsitting",
   "version": "0.0.0",
-  "author": "Ghislain de Juvigny",
+  "author": "Team Poireaux",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -55,7 +55,7 @@
       "locator": "ios"
     }
   ],
-  "description": "showtonight sample app",
+  "description": "adverttonight sample app",
   "cordova": {
     "plugins": {
       "ionic-plugin-keyboard": {},
