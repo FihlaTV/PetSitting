@@ -1,46 +1,46 @@
 import {Component} from '@angular/core';
 import {Config, NavController} from 'ionic-angular';
-import {ShowService} from '../../providers/show-service-rest';
-import {ShowDetailPage} from '../show-detail/show-detail';
+import {AdvertService} from '../../providers/advert-service-rest';
+import {AdvertDetailPage} from '../advert-detail/advert-detail';
 import leaflet from 'leaflet';
 
 @Component({
-    selector: 'page-show-list',
-    templateUrl: 'show-list.html'
+    selector: 'page-advert-list',
+    templateUrl: 'advert-list.html'
 })
-export class ShowListPage {
+export class AdvertListPage {
 
     public event = {
     month: '1990-02-19',
     timeStarts: '19:45',
     timeEnds: '23:30'}
 
-    shows: Array<any>;
-    showsForSearch: Array<any>;
+    adverts: Array<any>;
+    advertsForSearch: Array<any>;
     searchKey: string = "";
     viewMode: string = "list";
     map;
     markersGroup;
 
-    constructor(public navCtrl: NavController, public service: ShowService, public config: Config) {
+    constructor(public navCtrl: NavController, public service: AdvertService, public config: Config) {
         this.findAll();
     }
 
-    openShowDetail(show: any) {
-        this.navCtrl.push(ShowDetailPage, show);
+    openAdvertDetail(advert: any) {
+        this.navCtrl.push(advertDetailPage, advert);
     }
 
     onInput(event) {
          // Reset items back to all of the items
-        this.shows = this.showsForSearch;
+        this.adverts = this.advertsForSearch;
 
         // set val to the value of the searchbar
         let val = this.searchKey;
 
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
-          this.shows = this.shows.filter((show) => {
-            return (show.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+          this.adverts = this.adverts.filter((advert) => {
+            return (advert.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
           })
         }
     }
@@ -52,31 +52,31 @@ export class ShowListPage {
     findAll() {
         this.service.findAll()
             .then(data => {
-                this.shows = data;
-                this.showsForSearch = data;
+                this.adverts = data;
+                this.advertsForSearch = data;
             })
             .catch(error => alert(error));
     }
 
-    showMap() {
+    advertMap() {
         setTimeout(() => {
             this.map = leaflet.map("map").setView([48.85, 2.35], 10);
             leaflet.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
                 attribution: 'Tiles &copy; Esri'
             }).addTo(this.map);
-            this.showMarkers();
+            this.advertMarkers();
         })
     }
 
-    showMarkers() {
+    advertMarkers() {
         if (this.markersGroup) {
             this.map.removeLayer(this.markersGroup);
         }
         this.markersGroup = leaflet.layerGroup([]);
-        this.shows.forEach(show => {
-            if (show.lat, show.lng) {
-                let marker: any = leaflet.marker([show.lat, show.lng]).on('click', event => this.openShowDetail(event.target.data));
-                marker.data = show;
+        this.adverts.forEach(advert => {
+            if (advert.lat, advert.lng) {
+                let marker: any = leaflet.marker([advert.lat, advert.lng]).on('click', event => this.openAdvertDetail(event.target.data));
+                marker.data = advert;
                 this.markersGroup.addLayer(marker);
             }
         });

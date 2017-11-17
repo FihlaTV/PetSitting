@@ -9,23 +9,23 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="show-list">
+<ion-content class="advert-list">
 
     <ion-list *ngIf="viewMode==='list'">
 
-        <ion-item-sliding *ngFor="let show of shows">
-            <button ion-item (click)="openShowDetail(show)">
+        <ion-item-sliding *ngFor="let advert of adverts">
+            <button ion-item (click)="openAdvertDetail(advert)">
                 <ion-thumbnail item-left>
-                    <img src="{{show.image}}"/>
+                    <img src="{{advert.image}}"/>
                 </ion-thumbnail>
-                <h2>{{show.name}}</h2>
-                <p>{{show.date}}</p>
+                <h2>{{advert.title}}</h2>
+                <p>{{advert.date}}</p>
             </button>
         </ion-item-sliding>
 
     </ion-list>
 
-    <div *ngIf="viewMode==='map'" padding class="profile-info">
+    <div *ngIf="viewMode==='map'" padding class="advert-info">
 
         <h4>Create your advert</h4>
 
@@ -45,6 +45,11 @@
             </ion-list>
 
             <ion-item>
+                <ion-label stacked>Description</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
                 <ion-label stacked>Pet ID</ion-label>
                 <ion-input type="text"></ion-input>
             </ion-item>
@@ -60,7 +65,7 @@
             </ion-item>
                        
             <ion-item>
-                <ion-label stacked>Address</ion-label>
+                <ion-label stacked>Location</ion-label>
                 <ion-input type="text"></ion-input>
             </ion-item>
 

@@ -1,27 +1,27 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
-import {ShowService} from '../../providers/show-service-rest';
+import {AdvertService} from '../../providers/advert-service-rest';
 
 @Component({
-    selector: 'page-show-detail',
-    templateUrl: 'show-detail.html'
+    selector: 'page-advert-detail',
+    templateUrl: 'advert-detail.html'
 })
-export class ShowDetailPage {
+export class AdvertDetailPage {
 
-    show: any;
+    advert: any;
 
-    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public ShowService: ShowService, public toastCtrl: ToastController) {
-        this.show = this.navParams.data;
-        ShowService.findById(this.show.id).then(
-            show => this.show = show
+    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public AdvertService: AdvertService, public toastCtrl: ToastController) {
+        this.advert = this.navParams.data;
+        AdvertService.findById(this.advert.id).then(
+            advert => this.advert = advert
         );
     }
 
-    favorite(show) {
-        this.ShowService.favorite(show)
-            .then(show => {
+    favorite(advert) {
+        this.AdvertService.favorite(advert)
+            .then(advert => {
                 let toast = this.toastCtrl.create({
-                    message: 'Show added to your favorites',
+                    message: 'Advert added to your favorites',
                     cssClass: 'mytoast',
                     duration: 1000
                 });
@@ -29,7 +29,7 @@ export class ShowDetailPage {
             });
     }
 
-    share(show) {
+    share(advert) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
             title: 'Share via',
             buttons: [
