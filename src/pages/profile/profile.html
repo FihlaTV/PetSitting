@@ -21,36 +21,47 @@
 
 <ion-item>
     <ion-label stacked>Username</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" placeholder="Username"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>First Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" placeholder="First Name"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Last Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" placeholder="Last Name"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Phone Number</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" placeholder="Phone number"></ion-input>
+</ion-item>
+
+
+<ion-item>
+    <ion-label stacked>Birth Date</ion-label>
+    <ion-input type="Date" placeholder="01/02/1980"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Address</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" placeholder="Address"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label stacked>Email Adress</ion-label>
+    <ion-input type="text" placeholder="Email Adress"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" placeholder="Password"></ion-input>
 </ion-item>
 
-<button ion-button large >
-Send
+<button ion-button large (click)="updateUserInfo()">
+Update
 </button>
 
 </ion-list>
