@@ -17,7 +17,7 @@ export class ProfilePage {
 
     constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public UserService: UserService, public toastCtrl: ToastController) {
         this.user = this.navParams.data;
-        UserService.findById(this.user.id).then(
+        UserService.findById("5a104f9cf053ae624c001662").then(
             user => this.user = user
         );
 
