@@ -23,8 +23,8 @@ export class ProfilePage {
 
     }   
 
-  updateUserInfo(){
-  this.navCtrl.push(AdvertListPage);
+  updateUserInfo(user){
+  this.navCtrl.push(ProfilePage, user);
   }
 
 }

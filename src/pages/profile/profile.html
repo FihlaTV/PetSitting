@@ -17,7 +17,7 @@
 
         <h4>Username</h4>
 
-<ion-list *ngIf="user.id">
+<ion-list>
 
 <ion-item>
     <ion-label stacked>Username</ion-label>
@@ -26,7 +26,7 @@
 
 <ion-item>
     <ion-label stacked>First Name</ion-label>
-    <ion-input type="text" placeholder="first name"></ion-input>
+    <ion-input type="text" placeholder="{{user.firstName}}"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -65,7 +65,7 @@
     <ion-input type="password" placeholder="Password"></ion-input>
 </ion-item>
 
-<button ion-button large (click)="updateUserInfo()">
+<button ion-button large (click)="updateUserInfo(user)">
 Update
 </button>
 
