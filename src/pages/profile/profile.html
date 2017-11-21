@@ -21,48 +21,48 @@
 
 <ion-item>
     <ion-label stacked>Username</ion-label>
-    <ion-input type="text" placeholder="Username"></ion-input>
+    <ion-input type="text" placeholder="{{user.userName}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>First Name</ion-label>
-    <ion-input type="text" placeholder="first name"></ion-input>
+    <ion-input type="text" placeholder="{{user.firstName}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Last Name</ion-label>
-    <ion-input type="text" placeholder="Last Name"></ion-input>
+    <ion-input type="text" placeholder="{{user.lastName}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Phone Number</ion-label>
-    <ion-input type="text" placeholder="Phone number"></ion-input>
+    <ion-input type="text" placeholder="{{user.phoneNumber}}"></ion-input>
 </ion-item>
 
 
 <ion-item>
     <ion-label stacked>Birth Date</ion-label>
-    <ion-input type="Date" placeholder="01/02/1980"></ion-input>
+    <ion-input type="Date" placeholder="{{user.birthDate}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Address</ion-label>
-    <ion-input type="text" placeholder="Address"></ion-input>
+    <ion-input type="text" placeholder="{{user.address}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Description</ion-label>
-    <ion-input type="text" placeholder="Who are you"></ion-input>
+    <ion-input type="text" placeholder="{{user.description}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Email Adress</ion-label>
-    <ion-input type="text" placeholder="Email Adress"></ion-input>
+    <ion-input type="text" placeholder="{{user.email}}"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Password</ion-label>
-    <ion-input type="password" placeholder="Password"></ion-input>
+    <ion-input type="password" placeholder="{{user.password}}"></ion-input>
 </ion-item>
 
 <button ion-button large (click)="updateUserInfo(user)">
