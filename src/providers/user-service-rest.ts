@@ -24,7 +24,7 @@ export class UserService {
             .toPromise();
     }
 
-    updateUserInfo(user) {
+    updateInfo(user) {
     return this.http.post(usersURL + "update/" + user.id, user);
    }
 }

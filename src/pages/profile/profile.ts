@@ -23,7 +23,8 @@ export class ProfilePage {
 
     }   
 
+  UpdateUserInfo (user){
   UserService.updateUserInfo(user);
-  
+  }
 
 }
