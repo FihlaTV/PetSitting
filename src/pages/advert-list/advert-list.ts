@@ -40,7 +40,7 @@ export class AdvertListPage {
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
           this.adverts = this.adverts.filter((advert) => {
-            return (advert.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            return (advert.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
           })
         }
     }
