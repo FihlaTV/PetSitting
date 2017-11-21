@@ -23,5 +23,8 @@ export class UserService {
             .map(res => res.json())
             .toPromise();
     }
-   
+
+    updateUserInfo(user) {
+    return this.http.post(usersURL + "update/" + user.id, user);
+   }
 }
