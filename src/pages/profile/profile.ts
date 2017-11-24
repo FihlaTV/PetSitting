@@ -17,15 +17,15 @@ export class ProfilePage {
 
     constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public UserService: UserService, public toastCtrl: ToastController) {
         this.user = this.navParams.data;
-        this.UserService = UserService;
         UserService.findById("5a104f9cf053ae624c001662").then(
             user => this.user = user
         );
-
+        this.UserService = UserService;
     }   
 
   updateUserInfo (user){
   this.UserService.updateInfo(user);
+  this.navCtrl.push(ProfilePage, user);
   }
 
 }

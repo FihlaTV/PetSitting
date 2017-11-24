@@ -15,59 +15,75 @@
 
     <div padding class="profile-info">
 
-        <h4>Username: {{user.userName}}</h4>
+        <h4>{{user.userName}}</h4>
+
+ <button ion-button icon-left outline item-end block small>
+         <ion-icon name="paw"> </ion-icon>
+         My pets
+</button>
 
 <ion-list>
 
 <ion-item>
-    <ion-label stacked>Username</ion-label>
+    <ion-label stacked>Username:</ion-label>
     <ion-input type="text" value={{user.userName}}></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label stacked>First Name</ion-label>
+    <ion-label stacked>First Name:</ion-label>
     <ion-input type="text" value="{{user.firstName}}"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label stacked>Last Name</ion-label>
+    <ion-label stacked>Last Name:</ion-label>
     <ion-input type="text" value="{{user.lastName}}"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label stacked>Phone Number</ion-label>
+    <ion-label stacked>Phone Number:</ion-label>
     <ion-input type="text" value="{{user.phoneNumber}}"></ion-input>
 </ion-item>
 
 
 <ion-item>
-    <ion-label stacked>Birth Date</ion-label>
+    <ion-label stacked>Birth Date:</ion-label>
     <ion-input type="Date" value="{{user.birthDate}}"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label stacked>Address</ion-label>
+    <ion-label stacked>Address:</ion-label>
     <ion-input type="text" value="{{user.address}}"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label stacked>Description</ion-label>
+    <ion-label stacked>Description:</ion-label>
     <ion-input type="text" value="{{user.description}}"></ion-input>
 </ion-item>
 
+
 <ion-item>
-    <ion-label stacked>Email Adress</ion-label>
+    <ion-label stacked>Email Adress:</ion-label>
     <ion-input type="text" value="{{user.email}}"></ion-input>
 </ion-item>
 
+
 <ion-item>
-    <ion-label stacked>Password</ion-label>
+    <ion-label stacked>Password:</ion-label>
     <ion-input type="password" value="{{user.password}}"></ion-input>
 </ion-item>
 
-<button ion-button large (click)="updateUserInfo()">
+
+    
+
+<button ion-button large (click)="updateUserInfo(user)">
 Update
 </button>
+
+
+
+   
+
+
 
 </ion-list>
 
