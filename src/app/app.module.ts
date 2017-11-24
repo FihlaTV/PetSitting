@@ -14,6 +14,8 @@ import {WelcomePage} from '../pages/welcome/welcome';
 
 import {AdvertService} from "../providers/advert-service-rest";
 
+import {UserService} from "../providers/user-service-rest";
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -47,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    UserService,
     AdvertService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -1,20 +1,31 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
+
+import {UserService} from '../../providers/user-service-rest';
 
 
 @Component({
     selector: 'page-profile',
     templateUrl: 'profile.html'
 })
+
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController) {
-  }
+ user: any;
 
-  updateUserInfo(){
-  this.navCtrl.push(AdvertListPage);
+    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public UserService: UserService, public toastCtrl: ToastController) {
+        this.user = this.navParams.data;
+        UserService.findById("5a104f9cf053ae624c001662").then(
+            user => this.user = user
+        );
+        this.UserService = UserService;
+    }   
+
+  updateUserInfo (user){
+  this.UserService.updateInfo(user);
+  this.navCtrl.push(ProfilePage, user);
   }
 
 }
