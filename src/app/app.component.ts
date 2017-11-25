@@ -3,13 +3,26 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
+
+
 import {AboutPage} from '../pages/about/about';
+
 import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
 import {AdvertListPage} from '../pages/advert-list/advert-list';
-import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
-import {PetPage} from '../pages/pet/pet';
-import {ProfilePage} from '../pages/profile/profile';
+import {AdvertUpdatePage} from '../pages/advert-list/advert-update';
+
+import {PetDetailPage} from '../pages/pet/pet-detail';
+import {PetUpdatePage} from '../pages/pet/pet-update';
+import {PetUserListPage} from '../pages/pet/pet-user-list';
+
+import {ProfileDetailPage} from '../pages/profile/profile-detail';
+import {ProfileUpdatePage} from '../pages/profile/profile-update';
+
 import {WelcomePage} from '../pages/welcome/welcome';
+
+
+
+
 
 
 export interface MenuItem {
@@ -34,13 +47,13 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
+            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
             {title: 'Find a pet sitter', component: AdvertListPage, icon: 'contacts'},
-            {title: 'Start pet sitting', component: FavoriteListPage, icon: 'happy'}
+            {title: 'Start pet sitting (same as above!)', component: AdvertListPage, icon: 'happy'}
         ];
 
         this.helpMenuItems = [
-            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'Profile', component: ProfilePage, icon: 'contact'},
+            {title: 'My profile', component: ProfilePage, icon: 'contact'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 
