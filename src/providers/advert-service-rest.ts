@@ -7,8 +7,8 @@ let advertsURL = SERVER_URL + 'api/adverts/';
 
 @Injectable()
 export class AdvertService {
-  //favoriteCounter: number = 0;
-  //favorites: Array<any> = [];
+    //favoriteCounter: number = 0;
+    //favorites: Array<any> = [];
 
     constructor(public http: Http) {
         this.http = http;

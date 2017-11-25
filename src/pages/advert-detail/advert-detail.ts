@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {AdvertService} from '../../providers/advert-service-rest';
+import {UserService} from '../../providers/user-service-rest';
+import {PetService} from '../../providers/pet-service-rest';
+import {ProfileDetailPage} from '../profile-detail/profile-detail';
+import {PetDetailPage} from '../pet-detail/pet-detail';
 import leaflet from 'leaflet';
 
 @Component({
@@ -10,16 +14,42 @@ import leaflet from 'leaflet';
 export class AdvertDetailPage {
 
     advert: any;
+    user: any;
+    pet: any;
 
-    constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public AdvertService: AdvertService, public toastCtrl: ToastController) {
+    constructor(
+        public actionSheetCtrl: ActionSheetController, 
+        public navCtrl: NavController, 
+        public navParams: NavParams, 
+        public advertService: AdvertService, 
+        public userService: UserService, 
+        public petService: PetService, 
+        public toastCtrl: ToastController) {
+
         this.advert = this.navParams.data;
-        AdvertService.findById(this.advert.id).then(
+        advertService.findById(this.advert.id).then(
             advert => this.advert = advert
+        );
+
+        userService.findById(this.advert.userId).then(
+            user => this.user = user
+        );
+
+        petService.findById(this.advert.petId).then(
+            pet => this.pet = pet
         );
     }
 
+    openUserDetail(){
+        this.navCtrl.push(ProfileDetailPage, this.user);
+    }
+
+    openPetDetail(petId){
+        this.navCtrl.push(PetDetailPage, this.pet);
+    }
+
     /*favorite(advert) {
-        this.AdvertService.favorite(advert)
+        this.advertService.favorite(advert)
             .then(advert => {
                 let toast = this.toastCtrl.create({
                     message: 'Advert added to your favorites',
@@ -28,7 +58,7 @@ export class AdvertDetailPage {
                 });
                 toast.present(toast);
             });
-    }*/
+    }
 
     share(advert) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
@@ -56,5 +86,6 @@ export class AdvertDetailPage {
 
         actionSheet.present();
     }
+    */
 
 }

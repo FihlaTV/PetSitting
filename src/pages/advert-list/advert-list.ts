@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Config, NavController} from 'ionic-angular';
 import {AdvertService} from '../../providers/advert-service-rest';
 import {AdvertDetailPage} from '../advert-detail/advert-detail';
+import {AdvertUpdatePage} from '../advert-update/advert-update';
 import leaflet from 'leaflet';
 
 @Component({
@@ -28,6 +29,10 @@ export class AdvertListPage {
 
     openAdvertDetail(advert: any) {
         this.navCtrl.push(AdvertDetailPage, advert);
+    }
+
+    openAdvertCreate() {
+        this.navCtrl.push(AdvertUpdatePage, null);
     }
 
     onInput(event) {
