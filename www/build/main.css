@@ -24409,6 +24409,14 @@ ion-footer {
   margin-right: 10px;
 }
 
+.ios page-home .scroll-content, .md page-home .scroll-content {
+  background-color: #fcbf79;
+}
+
+.ios page-home ion-card-header, .md page-home ion-card-header {
+  font-weight: bold;
+}
+
 .profile-header {
   background-color: #434954;
   padding: 16px;
