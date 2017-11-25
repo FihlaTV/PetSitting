@@ -15,13 +15,13 @@
 
         <ion-list>
             <ion-item>
-                <ion-icon name="clock" item-start></ion-icon>
+                <ion-icon item-left name="clock"></ion-icon>
                 <h3>Date</h3>
                 <ion-note item-right>{{advert.date}}</ion-note>
             </ion-item>
 
             <ion-item>
-                <ion-icon name="home" item-start></ion-icon>
+                <ion-icon item-left name="home"></ion-icon>
                 <h3>Location</h3>
                 <ion-note item-right>{{advert.location}}</ion-note>
             </ion-item>
@@ -32,24 +32,19 @@
             </ion-item>
 
             <button ion-item (click)="openUserDetail(advert.userId)">
-                <ion-icon name="people" item-start></ion-icon>
+                <ion-icon item-left name="people"></ion-icon>
                 User
                 <ion-note item-right>{{advert.userId}}</ion-note>
             </button>
 
             <button ion-item (click)="openPetDetail(advert.petId)">
-                <ion-icon name="paw" item-start></ion-icon>
+                <ion-icon item-left name="paw"></ion-icon>
                 Pet
                 <ion-note item-right>{{advert.petId}}</ion-note>
             </button>
-
-            <button ion-item>
-                <ion-icon name="planet" item-start></ion-icon>
-                Space
-            </button>
             
             <ion-item>
-                <ion-icon name="pricetag" item-start></ion-icon>
+                <ion-icon item-left name="pricetag"></ion-icon>
                 <h3>Price</h3>
                 <ion-note item-right>{{advert.price}}</ion-note>
             </ion-item>
