@@ -6,6 +6,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 
 
 import {AboutPage} from '../pages/about/about';
+import {DashboardPage} from '../pages/dashboard/dashboard';
 
 import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
 import {AdvertListPage} from '../pages/advert-list/advert-list';
@@ -54,6 +55,7 @@ export class MyApp {
 
         this.helpMenuItems = [
             {title: 'My profile', component: ProfileUpdatePage, icon: 'contact'},
+            {title: 'Dashboard', component: DashboardPage, icon: 'information-circle'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 

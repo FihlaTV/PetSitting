@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 
 
 import {AboutPage} from '../pages/about/about';
+import {DashboardPage} from '../pages/dashboard/dashboard';
 
 import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
 import {AdvertListPage} from '../pages/advert-list/advert-list';
@@ -37,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AboutPage,
+    DashboardPage,
     AdvertDetailPage,
     AdvertListPage,
     AdvertUpdatePage,
@@ -56,6 +58,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     AboutPage,
+    DashboardPage,
     AdvertDetailPage,
     AdvertListPage,
     AdvertUpdatePage,

@@ -24370,6 +24370,45 @@ ion-footer {
   padding: 8px 16px !important;
 }
 
+.dashboard-header {
+  background-color: #434954;
+  padding: 16px;
+  width: 100%;
+  min-height: 150px;
+  text-align: center;
+}
+
+.dashboard-header img {
+  max-width: 200px;
+  min-height: 115px;
+  margin-left: -15px;
+  padding: 25px 0 20px 0;
+}
+
+.dashboard-info p {
+  color: #697072;
+  text-align: left;
+}
+
+.dashboard-info ion-icon {
+  color: #fca541;
+  width: 20px;
+}
+
+.md .dashboard-info [text-right],
+.wp .dashboard-info [text-right] {
+  margin-right: 0;
+}
+
+.ios .dashboard-info {
+  text-align: center;
+}
+
+.ios .dashboard-info ion-icon {
+  width: auto;
+  margin-right: 10px;
+}
+
 .profile-header {
   background-color: #434954;
   padding: 16px;
