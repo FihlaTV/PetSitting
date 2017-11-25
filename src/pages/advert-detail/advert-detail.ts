@@ -44,48 +44,7 @@ export class AdvertDetailPage {
         this.navCtrl.push(ProfileDetailPage, this.user);
     }
 
-    openPetDetail(petId){
+    openPetDetail(){
         this.navCtrl.push(PetDetailPage, this.pet);
     }
-
-    /*favorite(advert) {
-        this.advertService.favorite(advert)
-            .then(advert => {
-                let toast = this.toastCtrl.create({
-                    message: 'Advert added to your favorites',
-                    cssClass: 'mytoast',
-                    duration: 1000
-                });
-                toast.present(toast);
-            });
-    }
-
-    share(advert) {
-        let actionSheet: ActionSheet = this.actionSheetCtrl.create({
-            title: 'Share via',
-            buttons: [
-                {
-                    text: 'Twitter',
-                    handler: () => console.log('share via twitter')
-                },
-                {
-                    text: 'Facebook',
-                    handler: () => console.log('share via facebook')
-                },
-                {
-                    text: 'Email',
-                    handler: () => console.log('share via email')
-                },
-                {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: () => console.log('cancel share')
-                }
-            ]
-        });
-
-        actionSheet.present();
-    }
-    */
-
 }

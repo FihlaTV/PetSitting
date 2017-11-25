@@ -17,5 +17,8 @@ export class AdvertUpdatePage {
             advert => this.advert = advert
         );
     }
-    
+
+    createNewAdvert() {
+        
+    }
 }
