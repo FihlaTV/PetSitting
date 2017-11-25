@@ -12,19 +12,15 @@
 </ion-header>
 
 <ion-content class="advert-list">
-
-    <ion-item *ngFor="let advert of adverts">
-        
-            <ion-thumbnail item-start>
-                <img src="https://fr.cdn.v5.futura-sciences.com/buildsv6/images/mediumoriginal/f/3/c/f3c4005aa2_113261_comportement-animal-belette.jpg">
+    <ion-item-sliding *ngFor="let advert of adverts">
+        <button ion-item (click)="openAdvertDetail(advert)">
+            <ion-thumbnail item-left>
+                <img src="https://fr.cdn.v5.futura-sciences.com/buildsv6/images/mediumoriginal/f/3/c/f3c4005aa2_113261_comportement-animal-belette.jpg"/>
             </ion-thumbnail>
             <h2>{{advert.title}}</h2>
             <p>{{advert.date}}</p>
-            <button ion-button clear item-end (click)="openAdvertDetail(advert)">
-            View
-            </button>
-        
-    </ion-item>
+        </button>
+    </ion-item-sliding>
 
     <ion-fab right bottom>
     <button ion-fab (click)="openAdvertCreate()">
