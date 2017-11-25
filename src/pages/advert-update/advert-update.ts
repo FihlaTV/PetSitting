@@ -18,7 +18,8 @@ export class AdvertUpdatePage {
         );
     }
 
-    createNewAdvert() {
-        
+    createAdvert (advert){
+        this.AdvertService.createNewAdvert(advert);
+        this.navCtrl.push(AdvertListPage);
     }
 }
