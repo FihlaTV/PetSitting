@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
+import {ProfileDetailPage} from '../profile-detail/profile-detail';
+
 
 import {UserService} from '../../providers/user-service-rest';
 
@@ -25,7 +27,7 @@ export class ProfileUpdatePage {
 
   updateUserInfo (user){
     this.UserService.updateInfo(user);
-    this.navCtrl.push(ProfileUpdatePage, user);
+    this.navCtrl.push(ProfileDetailPage, user);
   }
 
 }

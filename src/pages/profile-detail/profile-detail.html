@@ -1,1 +1,37 @@
 <!--AFFICHER LES INFOS PUBLIQUES D'UN USER -->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="profile-header">
+        <img src="assets/img/profile.jpg">
+    </div>
+
+    <div padding class="profile-info">
+
+        <h4>{{user.userName}}</h4>
+
+ <button ion-button icon-left outline item-end block small (click)="openPetList()">
+         <ion-icon name="paw"> </ion-icon>
+         My pets
+</button>
+
+<div>
+	
+	<ion-item>
+	  Name
+	  <ion-badge item-end>{{user.userName}}</ion-badge>
+	</ion-item>
+
+</div>
+
+<button ion-button large (click)="updateMyProfile()">
+Update my profile
+</button>

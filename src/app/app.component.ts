@@ -53,7 +53,7 @@ export class MyApp {
         ];
 
         this.helpMenuItems = [
-            {title: 'My profile', component: ProfileUpdatePage, icon: 'contact'},
+            {title: 'My profile', component: ProfileDetailPage, icon: 'contact'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 
