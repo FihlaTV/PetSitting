@@ -9,14 +9,14 @@ import {AboutPage} from '../pages/about/about';
 
 import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
 import {AdvertListPage} from '../pages/advert-list/advert-list';
-import {AdvertUpdatePage} from '../pages/advert-list/advert-update';
+import {AdvertUpdatePage} from '../pages/advert-update/advert-update';
 
-import {PetDetailPage} from '../pages/pet/pet-detail';
-import {PetUpdatePage} from '../pages/pet/pet-update';
-import {PetUserListPage} from '../pages/pet/pet-user-list';
+import {PetDetailPage} from '../pages/pet-detail/pet-detail';
+import {PetUpdatePage} from '../pages/pet-update/pet-update';
+import {PetUserListPage} from '../pages/pet-user-list/pet-user-list';
 
-import {ProfileDetailPage} from '../pages/profile/profile-detail';
-import {ProfileUpdatePage} from '../pages/profile/profile-update';
+import {ProfileDetailPage} from '../pages/profile-detail/profile-detail';
+import {ProfileUpdatePage} from '../pages/profile-update/profile-update';
 
 import {WelcomePage} from '../pages/welcome/welcome';
 
@@ -53,7 +53,7 @@ export class MyApp {
         ];
 
         this.helpMenuItems = [
-            {title: 'My profile', component: ProfilePage, icon: 'contact'},
+            {title: 'My profile', component: ProfileUpdatePage, icon: 'contact'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 

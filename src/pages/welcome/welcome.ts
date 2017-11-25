@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
-import {ProfilePage} from '../profile/profile';
+import {ProfileUpdatePage} from '../profile-update/profile-update';
 
 @Component({
     selector: 'page-welcome',
@@ -14,14 +14,14 @@ export class WelcomePage {
     }
 
     ngAfterViewInit() {
-      this.slides.pager = true;
+        this.slides.pager = true;
     }
 
     openAdvertList() {
         this.navCtrl.push(AdvertListPage);
     }
 
-    openProfilePage() {
-        this.navCtrl.push(ProfilePage);
+    openProfileUpdatePage() {
+        this.navCtrl.push(ProfileUpdatePage);
     }
 }

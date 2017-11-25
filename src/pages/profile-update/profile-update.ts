@@ -7,13 +7,13 @@ import {UserService} from '../../providers/user-service-rest';
 
 
 @Component({
-    selector: 'page-profile',
-    templateUrl: 'profile.html'
+    selector: 'page-profile-update',
+    templateUrl: 'profile-update.html'
 })
 
-export class ProfilePage {
+export class ProfileUpdatePage {
 
- user: any;
+  user: any;
 
     constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public UserService: UserService, public toastCtrl: ToastController) {
         this.user = this.navParams.data;
@@ -24,8 +24,8 @@ export class ProfilePage {
     }   
 
   updateUserInfo (user){
-  this.UserService.updateInfo(user);
-  this.navCtrl.push(ProfilePage, user);
+    this.UserService.updateInfo(user);
+    this.navCtrl.push(ProfileUpdatePage, user);
   }
 
 }

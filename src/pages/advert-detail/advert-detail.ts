@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {AdvertService} from '../../providers/advert-service-rest';
+import leaflet from 'leaflet';
 
 @Component({
     selector: 'page-advert-detail',
@@ -17,7 +18,7 @@ export class AdvertDetailPage {
         );
     }
 
-    favorite(advert) {
+    /*favorite(advert) {
         this.AdvertService.favorite(advert)
             .then(advert => {
                 let toast = this.toastCtrl.create({
@@ -27,7 +28,7 @@ export class AdvertDetailPage {
                 });
                 toast.present(toast);
             });
-    }
+    }*/
 
     share(advert) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
