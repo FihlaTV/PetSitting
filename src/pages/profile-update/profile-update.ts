@@ -51,7 +51,7 @@ export class ProfileUpdatePage {
           text: 'Save',
           handler: data => {
             console.log('Saved clicked');
-          this.navCtrl.push(ProfileUpdatePage, user);
+          this.navCtrl.pop();
           }
         }
       ]
@@ -62,7 +62,7 @@ export class ProfileUpdatePage {
 
 
   openPetList() {
-  this.navCtrl.push(PetUserListPage);
+    this.navCtrl.push(PetUserListPage);
   }
 
 }

@@ -24,11 +24,7 @@ export class ProfileDetailPage {
         this.UserService = UserService;
     }   
 
-    updateMyProfile(){
-    this.navCtrl.push(ProfileUpdatePage);
-    }
-
     openPetList() {
-    this.navCtrl.push(PetUserListPage);
+        this.navCtrl.push(PetUserListPage);
     }
 }
