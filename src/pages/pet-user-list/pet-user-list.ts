@@ -30,7 +30,7 @@ export class PetUserListPage {
     }  
 
     createPet(){
-        this.navCtrl.push(PetUpdatePage);
+        this.navCtrl.push(PetUpdatePage, null);
     }
     
     openPetDetail(pet: any){

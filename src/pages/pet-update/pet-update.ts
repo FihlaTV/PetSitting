@@ -17,17 +17,13 @@ export class PetUpdatePage {
 	pet: any;
 
 	constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public PetService: PetService, public toastCtrl: ToastController) {
-		//if(this.pet){
-			this.pet = this.navParams.data;
-	        PetService.findById(this.pet.id).then(
-	            pet => this.pet = pet
-	        );
-        //}
+		
+		this.pet = this.navParams.data;
         this.PetService = PetService;
     }
 
  	createPet(pet){
- 		this.PetService.createNewPet(pet);
-  		this.navCtrl.push(PetUserListPage);
+ 		this.PetService.createNewPet(this.pet);
+  		this.navCtrl.pop();
   	}
 }
