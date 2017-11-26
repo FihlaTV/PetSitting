@@ -25,6 +25,12 @@ export class PetService {
             .toPromise();
     }
 
+    findByOwnerId(id) {
+        return this.http.get(petsURL + "ownerid/" + id)
+            .map(res => res.json())
+            .toPromise();
+    }
+
     findByBreed(breed) {
         return this.http.get(petsURL + "breed/" + breed)
             .map(res => res.json())

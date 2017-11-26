@@ -14,18 +14,19 @@ export class AdvertUpdatePage {
 	
 	constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public advertService: AdvertService, public toastCtrl: ToastController) {
         this.advert = this.navParams.data;
-        this.advertService.findById(this.advert.id).then(
+        /*this.advertService.findById(this.advert.id).then(
             advert => this.advert = advert
-        );
+        );*/
+        this.advertService = advertService;
     }
 
     updateAdvert (advert){
         this.advertService.updateAdvert(advert);
-        this.navCtrl.push(AdvertListPage);
+        this.navCtrl.pop();
     }
 
     createAdvert (advert){
         this.advertService.createNewAdvert(advert);
-        this.navCtrl.push(AdvertListPage);
+        this.navCtrl.pop();
     }
 }

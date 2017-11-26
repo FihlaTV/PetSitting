@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 
 import {PetService} from '../../providers/pet-service-rest';
-
 import {PetUserListPage} from '../pet-user-list/pet-user-list';
 
 
