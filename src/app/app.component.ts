@@ -48,7 +48,7 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Adverts', component: AdvertListPage, icon: 'contacts'},
+            {title: 'Adverts', component: AdvertListPage, icon: 'paw'},
         ];
 
         this.helpMenuItems = [

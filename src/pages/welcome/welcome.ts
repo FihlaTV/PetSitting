@@ -29,9 +29,14 @@ export class WelcomePage {
 
     showPrompt() {
     let prompt = this.alertCtrl.create({
-      title: 'Verification',
-      message: "Please enter your password to save your changes",
+      title: 'Connection',
+      message: "Please enter your credentials to login to the platform",
       inputs: [
+        {
+          type:"text",
+          name: 'username',
+          placeholder: 'username'
+        },
         {
           type:"password",
           name: 'password',
@@ -46,10 +51,10 @@ export class WelcomePage {
           }
         },
         {
-          text: 'Save',
+          text: 'Connect',
           handler: data => {
             console.log('Saved clicked');
-          this.navCtrl.push(ProfileUpdatePage);
+          this.navCtrl.push(AdvertListPage);
           }
         }
       ]
