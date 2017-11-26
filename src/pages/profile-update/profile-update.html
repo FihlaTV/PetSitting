@@ -11,15 +11,14 @@
 
 <ion-content>
 
-    <div class="profile-header">
-        <img src="assets/img/profile.jpg">
-    </div>
-
     <div padding class="profile-info">
 
         <h4>{{user.userName}}</h4>
 
- 
+        <button ion-button icon-left outline item-end block small (click)="openPetList()">
+        <ion-icon name="paw"> </ion-icon>
+        My pets
+        </button>
 
 <ion-list>
 
@@ -59,16 +58,7 @@
 <ion-item>
     <ion-label stacked>Email Adress:</ion-label>
     <ion-input type="text" value="{{user.email}}"></ion-input>
-</ion-item>
-
-
-<ion-item>
-    <ion-label stacked>Password:</ion-label>
-    <ion-input type="password" value="{{user.password}}"></ion-input>
-</ion-item>
-
-
-    
+</ion-item>  
 
 <button ion-button large (click)="updateUserInfo(user)">
 Update
