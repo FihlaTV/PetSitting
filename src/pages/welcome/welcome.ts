@@ -1,7 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
-import { Slides, NavController } from 'ionic-angular';
+import { Slides, NavController, AlertController} from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
 import {ProfileUpdatePage} from '../profile-update/profile-update';
+import {ProfileCreatePage} from '../profile-create/profile-create';
 
 @Component({
     selector: 'page-welcome',
@@ -10,7 +11,7 @@ import {ProfileUpdatePage} from '../profile-update/profile-update';
 export class WelcomePage {
   @ViewChild(Slides) slides: Slides;
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     }
 
     ngAfterViewInit() {
@@ -23,5 +24,40 @@ export class WelcomePage {
 
     openProfileUpdatePage() {
         this.navCtrl.push(ProfileUpdatePage);
+
+    }
+
+    showPrompt() {
+    let prompt = this.alertCtrl.create({
+      title: 'Verification',
+      message: "Please enter your password to save your changes",
+      inputs: [
+        {
+          type:"password",
+          name: 'password',
+          placeholder: 'password'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            console.log('Saved clicked');
+          this.navCtrl.push(ProfileUpdatePage);
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
+    openProfileCreatePage(){
+        this.navCtrl.push(ProfileCreatePage);
     }
 }

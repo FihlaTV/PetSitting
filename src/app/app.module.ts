@@ -21,6 +21,7 @@ import {PetUserListPage} from '../pages/pet-user-list/pet-user-list';
 
 import {ProfileDetailPage} from '../pages/profile-detail/profile-detail';
 import {ProfileUpdatePage} from '../pages/profile-update/profile-update';
+import {ProfileCreatePage} from '../pages/profile-create/profile-create';
 
 import {WelcomePage} from '../pages/welcome/welcome';
 
@@ -47,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PetUserListPage,
     ProfileDetailPage,
     ProfileUpdatePage,
+    ProfileCreatePage,
     WelcomePage
   ],
   imports: [  
@@ -67,6 +69,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PetUserListPage,
     ProfileDetailPage,
     ProfileUpdatePage,
+    ProfileCreatePage,
     WelcomePage
   ],
   providers: [
