@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
-import {ProfileDetailPage} from '../profile-detail/profile-detail';
+import {ProfileUpdatePage} from '../profile-update/profile-update';
 
 @Component({
     selector: 'page-welcome',
@@ -21,7 +21,7 @@ export class WelcomePage {
         this.navCtrl.push(AdvertListPage);
     }
 
-    openProfileDetailPage() {
-        this.navCtrl.push(ProfileDetailPage);
+    openProfileUpdatePage() {
+        this.navCtrl.push(ProfileUpdatePage);
     }
 }
