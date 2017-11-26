@@ -8,22 +8,30 @@
 
 <ion-content class="pet-list">
 
-<ion-list>
-    <ion-item *ngFor="let pet of pets" >
-        <ion-thumbnail item-left>
-            <img src="{{pet.image}}"/>
-        </ion-thumbnail>
-        <h2 (click)="openPetDetail(pet)">{{pet.name}}</h2>
-        <h3>{{pet.birthDate}}</h3>
-        <p>{{pet.description}}</p>
-        <button ion-button icon-only item-right danger (click)="deleteItem(pet)"> 
-            <ion-icon name="trash"></ion-icon>
+    <ion-item-sliding *ngFor="let pet of pets" >
+
+        <button ion-item (click)="openPetDetail(pet)">
+            <ion-thumbnail item-left>
+                <img src="{{pet.image}}"/>
+            </ion-thumbnail>
+            <h2>{{pet.name}}</h2>
+            <h3>{{pet.birthDate}}</h3>
+            <p>{{pet.description}}</p>
+            <button ion-button icon-only item-right danger (click)="deleteItem(pet)"> 
+                <ion-icon name="trash"></ion-icon>
+            </button>
         </button>
-    </ion-item>
-</ion-list>
+    </ion-item-sliding>
+
+    <ion-fab right bottom>
+        <button ion-fab (click)="createPet()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
 
 </ion-content>
 
+<!--
 <ion-footer padding>
     <ion-segment [(ngModel)]="viewMode">
         <ion-segment-button value="list">
@@ -34,4 +42,4 @@
         </ion-segment-button>
     </ion-segment>
 </ion-footer>
-
+-->

@@ -12,6 +12,7 @@
 </ion-header>
 
 <ion-content class="advert-list">
+    
     <ion-item-sliding *ngFor="let advert of adverts">
         <button ion-item (click)="openAdvertDetail(advert)">
             <ion-thumbnail item-left>
@@ -23,10 +24,10 @@
     </ion-item-sliding>
 
     <ion-fab right bottom>
-    <button ion-fab (click)="openAdvertCreate()">
-        <ion-icon name="add"></ion-icon>
-    </button>
-  </ion-fab>
+        <button ion-fab (click)="openAdvertCreate()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
 
 </ion-content>
 
