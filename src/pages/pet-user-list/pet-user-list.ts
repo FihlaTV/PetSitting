@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
-
 import { Config, NavController } from 'ionic-angular';
 
 import {PetService} from '../../providers/pet-service-rest';
-
 import {PetUpdatePage} from '../pet-update/pet-update';
-
 import {PetDetailPage} from '../pet-detail/pet-detail';
-
-
 
 
 @Component({
@@ -17,8 +12,8 @@ import {PetDetailPage} from '../pet-detail/pet-detail';
 })
 export class PetUserListPage {
 
-  pets: Array<any>;
-  viewMode: string = "list";
+    pets: Array<any>;
+    viewMode: string = "list";
 
       
    constructor(public navCtrl: NavController, public service: PetService, public config: Config) {
@@ -35,14 +30,10 @@ export class PetUserListPage {
     }  
 
     createPet(){
-    this.navCtrl.push(PetUpdatePage);
+        this.navCtrl.push(PetUpdatePage);
     }
     
     openPetDetail(pet: any){
-    this.navCtrl.push(PetDetailPage, pet);
-
+        this.navCtrl.push(PetDetailPage, pet);
     }
-
-
-
 }

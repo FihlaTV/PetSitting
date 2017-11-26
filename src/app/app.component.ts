@@ -54,12 +54,8 @@ export class MyApp {
         ];
 
         this.helpMenuItems = [
-<<<<<<< HEAD
             {title: 'My profile', component: ProfileUpdatePage, icon: 'contact'},
             {title: 'Dashboard', component: DashboardPage, icon: 'stats'},
-=======
-            {title: 'My profile', component: ProfileDetailPage, icon: 'contact'},
->>>>>>> master
             {title: 'About', component: AboutPage, icon: 'information-circle'},
         ];
 

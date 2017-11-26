@@ -32,7 +32,7 @@ export class AdvertListPage {
     }
 
     openAdvertCreate() {
-        this.navCtrl.push(AdvertUpdatePage, null);
+        this.navCtrl.push(AdvertUpdatePage);
     }
 
     onInput(event) {
