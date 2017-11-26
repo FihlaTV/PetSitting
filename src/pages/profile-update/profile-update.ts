@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController, AlertController} from 'ionic-angular';
 import {AdvertListPage} from '../advert-list/advert-list';
 import {ProfileDetailPage} from '../profile-detail/profile-detail';
-
-
+import {PetUserListPage} from '../pet-user-list/pet-user-list';
 import {UserService} from '../../providers/user-service-rest';
 
 
@@ -58,6 +57,12 @@ export class ProfileUpdatePage {
       ]
     });
     prompt.present();
+  }
+
+
+
+  openPetList() {
+  this.navCtrl.push(PetUserListPage);
   }
 
 }
