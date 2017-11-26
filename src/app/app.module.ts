@@ -74,6 +74,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     UserService,
     AdvertService,
+    PetService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

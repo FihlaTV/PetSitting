@@ -1,1 +1,53 @@
 <!--MODIFIER OU CREER UN PET -->
+
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Add new pet</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+   
+
+<ion-list>
+
+<ion-item>
+    <ion-label stacked>Name:</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label stacked>Breed:</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label stacked>Birthday:</ion-label>
+    <ion-input type="date"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label stacked>Description:</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+
+<ion-item>
+    <ion-label stacked>Image:</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label stacked>OwnerID:</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item>
+
+    
+
+<button ion-button full (click)="createNewPet(pet)">
+Add new pet
+</button>

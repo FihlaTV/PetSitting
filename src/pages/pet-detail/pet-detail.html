@@ -5,58 +5,54 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Profile</ion-title>
+        <ion-title>Pet</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
 
     <div class="pet-header">
-        <img src="assets/img/profile.jpg">
+        <img src="{{pet.image}}">
     </div>
 
-    <div padding class="profile-info">
+    <div padding class="pet-info">
 
-        <h4>Username</h4>
+        <h4>{{pet.name}}</h4>
 
-<ion-list>
+</div>
 
-<ion-item>
-    <ion-label stacked>Username</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item>
+                <ion-icon item-left name="clock"></ion-icon>
+                <h3>Name</h3>
+                <ion-note item-right>{{pet.name}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="home"></ion-icon>
+                <h3>Breed</h3>
+                <ion-note item-right>{{pet.breed}}</ion-note>
+            </ion-item>
 
-<ion-item>
-    <ion-label stacked>First Name</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-
-<ion-item>
-    <ion-label stacked>Last Name</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-
-<ion-item>
-    <ion-label stacked>Phone Number</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-
-<ion-item>
-    <ion-label stacked>Address</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-
-<ion-item>
-    <ion-label stacked>Password</ion-label>
-    <ion-input type="password"></ion-input>
-</ion-item>
-
-<button ion-button large >
-Send
-</button>
-
-</ion-list>
-
-    </div>
+            <ion-item>
+                <ion-icon item-left name="people"></ion-icon>
+                <h3>Description</h3>
+                <ion-note item-right>{{pet.description}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="pricetag"></ion-icon>
+                <h3>Birthday</h3>
+                <ion-note item-right>{{pet.birthDate}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="people"></ion-icon>
+                <h3>Owner</h3>
+                <ion-note item-right>{{pet.ownerID}}</ion-note>
+            </ion-item>
+            
+            
+        </ion-list>
+</ion-card-content>
+   
 
 </ion-content>

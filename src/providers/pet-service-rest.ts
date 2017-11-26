@@ -3,9 +3,38 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
-let usersURL = SERVER_URL + 'api/pets/';
+let petsURL = SERVER_URL + 'api/pets/';
 
 @Injectable()
 export class PetService {
+  
 
+    constructor(public http: Http) {
+        this.http = http;
+    }
+
+    findAll() {
+        return this.http.get(petsURL)
+            .map(res => res.json())
+            .toPromise();
+    }
+
+    findById(id) {
+        return this.http.get(petsURL + "id/" + id)
+            .map(res => res.json())
+            .toPromise();
+    }
+
+    findByBreed(breed) {
+        return this.http.get(petsURL + "breed/" + breed)
+            .map(res => res.json())
+            .toPromise();
+    }
+
+    delete(pet) {
+    return this.http.delete(petsURL + "delete/" + pet.id);
+   }
+
+  
 }
+

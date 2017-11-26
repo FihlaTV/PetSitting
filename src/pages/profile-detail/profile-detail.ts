@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {UserService} from '../../providers/user-service-rest';
 
+import {ProfileUpdatePage} from '../profile-update/profile-update';
+
+import {PetUserListPage} from '../pet-user-list/pet-user-list';
+
 
 @Component({
     selector: 'page-profile-detail',
@@ -20,4 +24,11 @@ export class ProfileDetailPage {
         this.UserService = UserService;
     }   
 
+    updateMyProfile(){
+    this.navCtrl.push(ProfileUpdatePage);
+    }
+
+    openPetList() {
+    this.navCtrl.push(PetUserListPage);
+    }
 }
