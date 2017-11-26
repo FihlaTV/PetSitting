@@ -9,35 +9,40 @@
 <ion-content>
     <ion-card *ngIf="advert.id">
         <img src="{{advert.image}}"/> <!--récupérer l'image du pet -->
-        <ion-card-content>
-            <h2 class="Title">{{advert.title}}</h2>
-        </ion-card-content>
+        <ion-card-header>
+            {{advert.title}}
+        </ion-card-header>
+
         <ion-list>
             <ion-item>
                 <ion-icon item-left name="clock"></ion-icon>
                 <h3>Date</h3>
                 <ion-note item-right>{{advert.date}}</ion-note>
             </ion-item>
+
             <ion-item>
                 <ion-icon item-left name="home"></ion-icon>
                 <h3>Location</h3>
                 <ion-note item-right>{{advert.location}}</ion-note>
             </ion-item>
+
             <ion-item>
-                <ion-icon item-left name="people"></ion-icon>
-                <h3>User</h3>
-                <ion-note item-right>{{advert.userId}}</ion-note>
-            </ion-item>
-            <ion-item>
-                <ion-icon item-left name="people"></ion-icon>
-                <h3>Pet</h3>
-                <ion-note item-right>{{advert.petId}}</ion-note>
-            </ion-item>
-            <ion-item>
-                <ion-icon item-left name="people"></ion-icon>
                 <h3>Description</h3>
                 <ion-note item-right>{{advert.description}}</ion-note>
             </ion-item>
+
+            <button ion-item (click)="openUserDetail(advert.userId)">
+                <ion-icon item-left name="people"></ion-icon>
+                User
+                <ion-note item-right>{{advert.userId}}</ion-note>
+            </button>
+
+            <button ion-item (click)="openPetDetail(advert.petId)">
+                <ion-icon item-left name="paw"></ion-icon>
+                Pet
+                <ion-note item-right>{{advert.petId}}</ion-note>
+            </button>
+            
             <ion-item>
                 <ion-icon item-left name="pricetag"></ion-icon>
                 <h3>Price</h3>
@@ -45,6 +50,7 @@
             </ion-item>
         </ion-list>
 
+<!--
         <ion-item>
             <button ion-button icon-left (click)="favorite(advert)" clear item-left>
                 <ion-icon name="star"></ion-icon>
@@ -55,6 +61,7 @@
                 Share
             </button>
         </ion-item>
+    -->
 
     </ion-card>
 </ion-content>

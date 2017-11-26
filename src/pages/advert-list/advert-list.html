@@ -12,97 +12,22 @@
 </ion-header>
 
 <ion-content class="advert-list">
+    <ion-item-sliding *ngFor="let advert of adverts">
+        <button ion-item (click)="openAdvertDetail(advert)">
+            <ion-thumbnail item-left>
+                <img src="https://fr.cdn.v5.futura-sciences.com/buildsv6/images/mediumoriginal/f/3/c/f3c4005aa2_113261_comportement-animal-belette.jpg"/>
+            </ion-thumbnail>
+            <h2>{{advert.title}}</h2>
+            <p>{{advert.date}}</p>
+        </button>
+    </ion-item-sliding>
 
-    <ion-list *ngIf="viewMode==='list'">
-
-        <ion-item-sliding *ngFor="let advert of adverts">
-            <button ion-item (click)="openAdvertDetail(advert)">
-                <ion-thumbnail item-left>
-                    <img src="{{advert.image}}"/>
-                </ion-thumbnail>
-                <h2>{{advert.title}}</h2>
-                <p>{{advert.date}}</p>
-            </button>
-        </ion-item-sliding>
-
-    </ion-list>
-
-    <div *ngIf="viewMode==='map'" padding class="advert-info">
-
-        <h4>Create your advert</h4>
-
-            <ion-list>
-
-            <ion-list radio-group [(ngModel)]="relationship">
-                <ion-item>
-                    <ion-label>I am looking for a pet sitter</ion-label>
-                    <ion-radio value="looking" checked></ion-radio>
-                </ion-item>
-
-                <ion-item>
-                    <ion-label>I want to offer my services as a pet sitter</ion-label>
-                    <ion-radio value="offering"></ion-radio>
-                </ion-item>
-
-            </ion-list>
-
-            <ion-item>
-                <ion-label stacked>Description</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Pet ID</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Start Time</ion-label>
-                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-            </ion-item>
-
-             <ion-item>
-                <ion-label stacked>End Time</ion-label>
-                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeEnds"></ion-datetime>
-            </ion-item>
-                       
-            <ion-item>
-                <ion-label stacked>Location</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Price</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Phone Number</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Address</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <button ion-button large >
-            Create
-            </button>
-
-        </ion-list>
-
-    </div>
+    <ion-fab right bottom>
+    <button ion-fab (click)="openAdvertCreate()">
+        <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>
 
-<ion-footer padding>
-    <ion-segment [(ngModel)]="viewMode">
-        <ion-segment-button value="list">
-            <ion-icon name="list"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="map">
-            <ion-icon name="add"></ion-icon>
-        </ion-segment-button>
-    </ion-segment>
-</ion-footer>
+

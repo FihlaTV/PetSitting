@@ -7,8 +7,8 @@ let advertsURL = SERVER_URL + 'api/adverts/';
 
 @Injectable()
 export class AdvertService {
-  //favoriteCounter: number = 0;
-  //favorites: Array<any> = [];
+    //favoriteCounter: number = 0;
+    //favorites: Array<any> = [];
 
     constructor(public http: Http) {
         this.http = http;
@@ -38,20 +38,12 @@ export class AdvertService {
             .toPromise();
     }
 
-    /*
-    favorite(advert) {
-        this.favoriteCounter = this.favoriteCounter + 1;
-        this.favorites.push({id: this.favoriteCounter, advert: advert});
-        return Promise.resolve();
+    createNewAdvert(advert) {
+        return this.http.post(advertsURL + "create", advert);
     }
 
-    unfavorite(favorite) {
-        let index = this.favorites.indexOf(favorite);
-        if (index > -1) {
-          this.favorites.splice(index, 1);
-        }
-        return Promise.resolve();
+    updateAdvert(advert) {
+        return this.http.post(advertsURL + "update/" + advert.id, advert);
     }
-    */
 
 }
