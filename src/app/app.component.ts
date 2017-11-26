@@ -48,15 +48,14 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'Find a pet sitter', component: AdvertListPage, icon: 'contacts'},
-            {title: 'Start pet sitting (same as above!)', component: AdvertListPage, icon: 'happy'}
+            {title: 'Adverts', component: AdvertListPage, icon: 'paw'},
         ];
 
         this.helpMenuItems = [
-            {title: 'My profile', component: ProfileDetailPage, icon: 'contact'},
+            {title: 'My profile', component: ProfileUpdatePage, icon: 'contact'},
             {title: 'Dashboard', component: DashboardPage, icon: 'stats'},
             {title: 'About', component: AboutPage, icon: 'information-circle'},
+            {title: 'Log out', component: WelcomePage, icon: 'log-out'},
         ];
 
     }
