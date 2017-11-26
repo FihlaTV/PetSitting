@@ -5,49 +5,48 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Add new pet</ion-title>
+        <ion-title>Add new pet or update</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-   
+    <ion-list>
 
-<ion-list>
+        <ion-item>
+            <ion-label stacked>Name:</ion-label>
+            <ion-input type="text" value={{pet.name}}></ion-input>
+        </ion-item>
 
-<ion-item>
-    <ion-label stacked>Name:</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
+        <ion-item>
+            <ion-label stacked>Breed:</ion-label>
+            <ion-input type="text" value={{pet.breed}}></ion-input>
+        </ion-item>
 
-<ion-item>
-    <ion-label stacked>Breed:</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
+        <ion-item>
+            <ion-label stacked>Birthday:</ion-label>
+            <ion-input type="date" value={{pet.birthDate}}></ion-input>
+        </ion-item>
 
-<ion-item>
-    <ion-label stacked>Birthday:</ion-label>
-    <ion-input type="date"></ion-input>
-</ion-item>
+        <ion-item>
+            <ion-label stacked>Description:</ion-label>
+            <ion-input type="text" value={{pet.description}}></ion-input>
+        </ion-item>
 
-<ion-item>
-    <ion-label stacked>Description:</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
+        <ion-item>
+            <ion-label stacked>Image:</ion-label>
+            <ion-input type="text" value={{pet.image}}></ion-input>
+        </ion-item>
 
+        <ion-item>
+            <ion-label stacked>OwnerID:</ion-label>
+            <ion-input type="text" value={{pet.ownerId}}></ion-input>
+        </ion-item>
 
-<ion-item>
-    <ion-label stacked>Image:</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
+        <button ion-button full (click)="createPet(pet)">
+        Validate
+        </button>
+        
+    </ion-list>
 
-<ion-item>
-    <ion-label stacked>OwnerID:</ion-label>
-    <ion-input type="text"></ion-input>
-</ion-item>
-
-    
-
-<button ion-button full (click)="createNewPet(pet)">
-Add new pet
-</button>
+</ion-content>

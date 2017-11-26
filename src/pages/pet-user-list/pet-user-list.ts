@@ -36,4 +36,8 @@ export class PetUserListPage {
     openPetDetail(pet: any){
         this.navCtrl.push(PetDetailPage, pet);
     }
+
+    openPetUpdate(pet: any){
+        this.navCtrl.push(PetUpdatePage, pet);
+    }
 }

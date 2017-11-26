@@ -31,9 +31,13 @@ export class PetService {
             .toPromise();
     }
 
+    createNewPet(pet){
+        return this.http.post(petsURL + "create", pet);
+    }
+
     delete(pet) {
-    return this.http.delete(petsURL + "delete/" + pet.id);
-   }
+        return this.http.delete(petsURL + "delete/" + pet.id);
+    }
 
   
 }
