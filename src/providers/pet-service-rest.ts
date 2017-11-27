@@ -38,7 +38,7 @@ export class PetService {
     }
 
     createNewPet(pet){
-        return this.http.post(petsURL + "create", pet).toPromise();
+        return this.http.post(petsURL + "create/", pet).toPromise();
     }
 
 
