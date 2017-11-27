@@ -15,32 +15,32 @@
 
         <ion-item>
             <ion-label stacked>Name:</ion-label>
-            <ion-input type="text" value={{pet.name}}></ion-input>
+            <ion-input type="text"  [(ngModel)]="pet.name"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>Breed:</ion-label>
-            <ion-input type="text" value={{pet.breed}}></ion-input>
+            <ion-input type="text" [(ngModel)]="pet.breed"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>Birthday:</ion-label>
-            <ion-input type="date" value={{pet.birthDate}}></ion-input>
+            <ion-input type="date" [(ngModel)]="pet.birthDate"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>Description:</ion-label>
-            <ion-input type="text" value={{pet.description}}></ion-input>
+            <ion-input type="text" [(ngModel)]="pet.description"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>Image:</ion-label>
-            <ion-input type="text" value={{pet.image}}></ion-input>
+            <ion-input type="text" [(ngModel)]="pet.image"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>OwnerID:</ion-label>
-            <ion-input type="text" value={{pet.ownerId}}></ion-input>
+            <ion-input type="text" [(ngModel)]="pet.ownerId"></ion-input>
         </ion-item>
 
         <button ion-button full (click)="updatePet(pet)">

@@ -22,7 +22,8 @@ export class PetUpdatePage {
     }
 
  	updatePet(pet){
- 		this.PetService.updatePet(this.pet);
-  		this.navCtrl.pop();
+ 		console.log(pet);
+    this.PetService.updatePet(this.pet);
+  	this.navCtrl.pop();
   	}
 }
