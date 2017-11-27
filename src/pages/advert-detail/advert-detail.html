@@ -17,7 +17,7 @@
             <ion-item>
                 <ion-icon item-left name="clock"></ion-icon>
                 <h3>Date</h3>
-                <p>{{advert.date}}</p>
+                <ion-item> <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="advert.date"></ion-datetime></ion-item>
             </ion-item>
 
             <ion-item>

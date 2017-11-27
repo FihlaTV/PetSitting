@@ -19,7 +19,7 @@
                 <img src="https://fr.cdn.v5.futura-sciences.com/buildsv6/images/mediumoriginal/f/3/c/f3c4005aa2_113261_comportement-animal-belette.jpg"/>
             </ion-thumbnail>
             <h2>{{advert.title}}</h2>
-            <p>{{advert.date}}</p>
+            <ion-item> <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="advert.date"></ion-datetime></ion-item>
         </button>
     </ion-item-sliding>
 
