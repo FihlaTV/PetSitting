@@ -13,7 +13,7 @@ import leaflet from 'leaflet';
 })
 export class AdvertCreatePage {
 
-	
+	advert: any;
 	
 	constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public advertService: AdvertService, public toastCtrl: ToastController) {
         
@@ -22,7 +22,7 @@ export class AdvertCreatePage {
    
 
     createAdvert (advert){
-        this.advertService.createNewAdvert(advert);
-        
+        this.advertService.createNewAdvert(this.advert);
+        this.navCtrl.pop();
     }
 }

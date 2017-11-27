@@ -45,7 +45,8 @@ export class AdvertListPage {
                 this.pet = data;
             })
             .catch(error => alert(error));
-        return this.pet.image;
+        //return this.pet.image;
+        return "https://i.skyrock.net/6788/18136788/pics/518207324.jpg";
     }
 
     onInput(event) {
