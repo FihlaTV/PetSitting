@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Config, NavController} from 'ionic-angular';
 import {AdvertService} from '../../providers/advert-service-rest';
+import {PetService} from '../../providers/pet-service-rest';
 import {AdvertDetailPage} from '../advert-detail/advert-detail';
 import {AdvertUpdatePage} from '../advert-update/advert-update';
 import {AdvertCreatePage} from '../advert-create/advert-create';
@@ -19,12 +20,13 @@ export class AdvertListPage {
 
     adverts: Array<any>;
     advertsForSearch: Array<any>;
+    pet: any;
     searchKey: string = "";
     viewMode: string = "list";
     map;
     markersGroup;
 
-    constructor(public navCtrl: NavController, public service: AdvertService, public config: Config) {
+    constructor(public navCtrl: NavController, public service: AdvertService, public petService: PetService, public config: Config) {
         this.findAll();
     }
 
@@ -34,6 +36,16 @@ export class AdvertListPage {
 
     openAdvertCreate() {
         this.navCtrl.push(AdvertCreatePage);
+    }
+
+    getPetImage(petId) {
+        
+        this.petService.findById(petId)
+            .then(data => {
+                this.pet = data;
+            })
+            .catch(error => alert(error));
+        return this.pet.image;
     }
 
     onInput(event) {
