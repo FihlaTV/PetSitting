@@ -35,13 +35,13 @@
             <button ion-item (click)="openUserDetail(advert.userId)">
                 <ion-icon item-left name="people"></ion-icon>
                 <h3>User</h3>
-                <p>{{advert.userId}}</p>
+                <p>{{getUserName(advert.userId)}}</p>
             </button>
 
             <button ion-item (click)="openPetDetail(advert.petId)">
                 <ion-icon item-left name="paw"></ion-icon>
                 <h3>Pet</h3>
-                <p>{{advert.petId}}</p>
+                <p>{{getPetName(advert.petId)}}</p>
             </button>
             
             <ion-item>

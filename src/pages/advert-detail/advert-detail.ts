@@ -57,4 +57,34 @@ export class AdvertDetailPage {
     updateAdvert(advert){
         this.navCtrl.push(AdvertUpdatePage, advert);
     }
+
+    getPetImage(petId) {
+        
+        this.petService.findById(petId)
+            .then(pet => this.pet = pet)
+            .catch(error => alert(error));
+
+        //return this.pet.image;
+        //return "https://i.skyrock.net/6788/18136788/pics/518207324.jpg";
+    }
+
+    getPetName(petId) {
+        
+        this.petService.findById(petId)
+            .then(data => this.pet = data)
+            .catch(error => alert(error));
+
+        return this.pet.name;
+        //return "https://i.skyrock.net/6788/18136788/pics/518207324.jpg";
+    }
+
+    getUserName(userId) {
+        
+        this.userService.findById(userId)
+            .then(data => this.user = data)
+            .catch(error => alert(error));
+
+        return this.user.username;
+        //return "https://i.skyrock.net/6788/18136788/pics/518207324.jpg";
+    }
 }

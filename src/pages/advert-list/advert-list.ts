@@ -41,11 +41,10 @@ export class AdvertListPage {
     getPetImage(petId) {
         
         //this.petService.findById(petId)
-        this.petService.findById("5a0c7fc1960ee63755bb0010")
-            .then(data => {
-                this.pet = data;
-            })
+        this.petService.findById("5a11fbc6e7ad1801f04efc30")
+            .then(pet => this.pet = pet)
             .catch(error => alert(error));
+
         return this.pet.image;
         //return "https://i.skyrock.net/6788/18136788/pics/518207324.jpg";
     }
