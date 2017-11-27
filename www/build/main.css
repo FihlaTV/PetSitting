@@ -24698,6 +24698,11 @@ profile-header {
   text-align: center;
 }
 
+.profile-footer {
+  color: #697072;
+  text-align: center;
+}
+
 .profile-header img {
   max-width: 200px;
   min-height: 115px;
