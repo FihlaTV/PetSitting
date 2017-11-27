@@ -54,7 +54,7 @@ export class WelcomePage {
           text: 'Connect',
           handler: data => {
             console.log('Saved clicked');
-          this.navCtrl.push(AdvertListPage);
+          this.navCtrl.setRoot(AdvertListPage);
           }
         }
       ]
