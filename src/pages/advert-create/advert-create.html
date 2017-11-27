@@ -28,43 +28,43 @@
 
 	<ion-item>
 	    <ion-label stacked>Title</ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input type="text"[(ngModel)]="advert.title"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Location</ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.location"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Description</ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.description"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Price</ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.price"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Date</ion-label>
-	    <ion-input type="Date"></ion-input>
+	    <ion-input type="Date" [(ngModel)]="advert.date"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>User ID</ion-label>
-	    <ion-input type="text"></ion-input>
+	    <ion-input type="text"[(ngModel)]="advert.userId"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Pet ID</ion-label>
-	    <ion-input type="text" placeholder="only when looking for pet sitter"></ion-input>
+	    <ion-input type="text" placeholder="only when looking for pet sitter" [(ngModel)]="advert.petId"></ion-input>
 	</ion-item>
 
 	
 
 
-	<button ion-button large >
+	<button ion-button large (click)="createAdvert(advert)">
 	Create
 	</button>
 

@@ -15,14 +15,20 @@ export class AdvertCreatePage {
 
 	
 	
-	constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public advertService: AdvertService, public toastCtrl: ToastController) {
-        
+	advert: any;
+
+	constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public AdvertService: AdvertService, public toastCtrl: ToastController) {
+		
+		this.advert = this.navParams.data;
+        this.AdvertService = AdvertService;
     }
 
    
 
     createAdvert (advert){
-        this.advertService.createNewAdvert(advert);
+        console.log(advert);
+        this.AdvertService.createNewAdvert(advert);
+        this.navCtrl.setRoot(AdvertListPage);
         
     }
 }

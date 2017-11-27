@@ -3,6 +3,7 @@ import {ActionSheetController, ActionSheet, NavController, NavParams, ToastContr
 
 import {PetService} from '../../providers/pet-service-rest';
 import {PetUserListPage} from '../pet-user-list/pet-user-list';
+import {ProfileUpdatePage} from '../profile-update/profile-update';
 
 
 
@@ -24,6 +25,7 @@ export class PetCreatePage {
  	createPet(pet){
     console.log(pet);
  		this.PetService.createNewPet(pet);
-  	this.navCtrl.push(PetUserListPage);
+  	this.navCtrl.push(ProfileUpdatePage);
+
   	}
 }
