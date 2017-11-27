@@ -11,18 +11,22 @@
 
 <ion-content>
 
-    <div class="profile-header">
+    <div class="profile-footer">
         <img src="{{user.image}}">
     </div>
 
-    <div padding class="profile-info">
+    <div padding class="profile-footer">
 
         <h4>{{user.userName}}</h4>
 
-        <button ion-button icon-left outline item-end block small (click)="openPetList()">
+        <button ion-button icon-left outline item-end small (click)="openPetList()">
         <ion-icon name="paw"> </ion-icon>
         My pets
         </button>
+
+    </div>
+
+<div padding class="profile-info">
 
 <ion-list>
 
@@ -64,18 +68,20 @@
     <ion-input type="text" [(ngModel)]="user.email"></ion-input>
 </ion-item>  
 
-<button ion-button large (click)="updateUserInfo(user)">
-Update
-</button>
-
-
-
-   
-
-
-
 </ion-list>
 
+
+
+
+
+
     </div>
+
+    <div class="profile-footer">
+        <button ion-button large (click)="updateUserInfo(user)">
+Update
+</button>
+    </div>
+
 
 </ion-content>
