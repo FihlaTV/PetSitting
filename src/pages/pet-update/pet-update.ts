@@ -21,8 +21,8 @@ export class PetUpdatePage {
         this.PetService = PetService;
     }
 
- 	createPet(pet){
- 		this.PetService.createNewPet(this.pet);
+ 	updatePet(pet){
+ 		this.PetService.updatePet(this.pet);
   		this.navCtrl.pop();
   	}
 }

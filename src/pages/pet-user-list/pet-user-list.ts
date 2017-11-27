@@ -4,6 +4,7 @@ import { Config, NavController } from 'ionic-angular';
 import {PetService} from '../../providers/pet-service-rest';
 import {PetUpdatePage} from '../pet-update/pet-update';
 import {PetDetailPage} from '../pet-detail/pet-detail';
+import {PetCreatePage} from '../pet-create/pet-create';
 
 
 @Component({
@@ -33,7 +34,7 @@ export class PetUserListPage {
     }  
 
     createPet(){
-        this.navCtrl.push(PetUpdatePage, null);
+        this.navCtrl.push(PetCreatePage, null);
     }
     
     openPetDetail(pet: any){

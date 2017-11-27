@@ -11,9 +11,12 @@ import {DashboardPage} from '../pages/dashboard/dashboard';
 import {AdvertDetailPage} from '../pages/advert-detail/advert-detail';
 import {AdvertListPage} from '../pages/advert-list/advert-list';
 import {AdvertUpdatePage} from '../pages/advert-update/advert-update';
+import {AdvertCreatePage} from '../pages/advert-create/advert-create';
+
 
 import {PetDetailPage} from '../pages/pet-detail/pet-detail';
 import {PetUpdatePage} from '../pages/pet-update/pet-update';
+import {PetCreatePage} from '../pages/pet-create/pet-create';
 import {PetUserListPage} from '../pages/pet-user-list/pet-user-list';
 
 import {ProfileDetailPage} from '../pages/profile-detail/profile-detail';

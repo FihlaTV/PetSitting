@@ -25,8 +25,5 @@ export class AdvertUpdatePage {
         this.navCtrl.pop();
     }
 
-    createAdvert (advert){
-        this.advertService.createNewAdvert(advert);
-        this.navCtrl.pop();
-    }
+    
 }

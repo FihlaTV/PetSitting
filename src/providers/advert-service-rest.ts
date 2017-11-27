@@ -39,7 +39,7 @@ export class AdvertService {
     }
 
     createNewAdvert(advert) {
-        return this.http.post(advertsURL + "create", advert);
+        return this.http.post(advertsURL + "create/", advert);
     }
 
     updateAdvert(advert) {

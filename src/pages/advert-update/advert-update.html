@@ -1,64 +1,70 @@
 <!--MODIFIER OU CREER UNE ADVERT -->
 
-<h4>Create your advert</h4>
+<ion-header>
+    <ion-navbar>
+        <ion-title>Update advert</ion-title>
+    </ion-navbar>
+</ion-header>
 
-<ion-list>
+<ion-content>
+    <ion-card *ngIf="advert.id">
+       
+       <ion-card-header>
+            <ion-input type="text" value={{advert.title}}></ion-input>
+        </ion-card-header>
 
-	<ion-list radio-group [(ngModel)]="relationship">
-	    <ion-item>
-	        <ion-label>I am looking for a pet sitter</ion-label>
-	        <ion-radio value="looking" checked></ion-radio>
-	    </ion-item>
+        <ion-list>
 
-	    <ion-item>
-	        <ion-label>I want to offer my services as a pet sitter</ion-label>
-	        <ion-radio value="offering"></ion-radio>
-	    </ion-item>
 
-	</ion-list>
+        	    <ion-item>
+                <ion-icon item-left name="clock"></ion-icon>
+                <ion-input type="date" value={{advert.date}}></ion-input>
+            </ion-item>
 
-	<ion-item>
-	    <ion-label stacked>Description</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
+            <ion-item>
+                <ion-icon item-left name="home"></ion-icon>
+                <ion-input type="text" value={{advert.location}}></ion-input>
+                
+            </ion-item>
 
-	<ion-item>
-	    <ion-label stacked>Pet ID</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
+            <ion-item>
+                <ion-icon item-left name="create"></ion-icon>
+                <ion-input type="text" value={{advert.description}}></ion-input>
+            </ion-item>
 
-	<ion-item>
-	    <ion-label stacked>Start Time</ion-label>
-	    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-	</ion-item>
+			<ion-item>
+                <ion-icon item-left name="people"></ion-icon>
+                <ion-input type="text" value={{advert.userId}}></ion-input>
+            </ion-item>
+            
+			<ion-item>
+                <ion-icon item-left name="paw"></ion-icon>
+                <ion-input type="text" value={{advert.petId}}></ion-input>
+            </ion-item>
+           
+            
+            <ion-item>
+                <ion-icon item-left name="pricetag"></ion-icon>
+                <ion-input type="text" value={{advert.price}}></ion-input>
+            </ion-item>
 
-	 <ion-item>
-	    <ion-label stacked>End Time</ion-label>
-	    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeEnds"></ion-datetime>
-	</ion-item>
-	           
-	<ion-item>
-	    <ion-label stacked>Location</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
+            <button ion-button full (click)="updateAdvert(advert)">
+            Update
+            </button>
+        </ion-list>
 
-	<ion-item>
-	    <ion-label stacked>Price</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
+<!--
+        <ion-item>
+            <button ion-button icon-left (click)="favorite(advert)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                Favorite
+            </button>
+            <button ion-button icon-left (click)="share(advert)" clear item-right>
+                <ion-icon name="share"></ion-icon>
+                Share
+            </button>
+        </ion-item>
+    -->
 
-	<ion-item>
-	    <ion-label stacked>Phone Number</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
-
-	<ion-item>
-	    <ion-label stacked>Address</ion-label>
-	    <ion-input type="text"></ion-input>
-	</ion-item>
-
-	<button ion-button large >
-	Create
-	</button>
-
-</ion-list>
+    </ion-card>
+</ion-content>
