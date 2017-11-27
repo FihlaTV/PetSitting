@@ -24,40 +24,40 @@
 
 <ion-item>
     <ion-label stacked>Username:</ion-label>
-    <ion-input type="text" value={{user.userName}}></ion-input>
+    <ion-input type="text" [(ngModel)]="user.userName"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>First Name:</ion-label>
-    <ion-input type="text" value="{{user.firstName}}"></ion-input>
+    <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Last Name:</ion-label>
-    <ion-input type="text" value="{{user.lastName}}"></ion-input>
+    <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
 </ion-item>
 
 <ion-item>
     <ion-label stacked>Phone Number:</ion-label>
-    <ion-input type="text" value="{{user.phoneNumber}}"></ion-input>
+    <ion-input type="text" [(ngModel)]="user.phoneNumber"></ion-input>
 </ion-item>
 
 
 <ion-item>
     <ion-label stacked>Birth Date:</ion-label>
-    <ion-input type="Date" value="{{user.birthDate}}"></ion-input>
+    <ion-input type="Date" [(ngModel)]="user.birthDate"></ion-input>
 </ion-item>
 
 
 <ion-item>
     <ion-label stacked>Description:</ion-label>
-    <ion-input type="text" value="{{user.description}}"></ion-input>
+    <ion-input type="text" [(ngModel)]="user.description"></ion-input>
 </ion-item>
 
 
 <ion-item>
     <ion-label stacked>Email Adress:</ion-label>
-    <ion-input type="text" value="{{user.email}}"></ion-input>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
 </ion-item>  
 
 <button ion-button large (click)="updateUserInfo(user)">

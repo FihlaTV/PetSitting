@@ -25,6 +25,7 @@ export class ProfileUpdatePage {
     }   
 
   updateUserInfo (user){
+    console.log(user);
     this.UserService.updateInfo(user);
     this.showPrompt(user);
   }
