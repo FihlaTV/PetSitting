@@ -1,10 +1,16 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
+
 import {AdvertService} from '../../providers/advert-service-rest';
 import {UserService} from '../../providers/user-service-rest';
 import {PetService} from '../../providers/pet-service-rest';
+
 import {ProfileDetailPage} from '../profile-detail/profile-detail';
+
 import {PetDetailPage} from '../pet-detail/pet-detail';
+
+import {AdvertUpdatePage} from '../advert-update/advert-update';
+
 import leaflet from 'leaflet';
 
 @Component({
@@ -46,5 +52,9 @@ export class AdvertDetailPage {
 
     openPetDetail(){
         this.navCtrl.push(PetDetailPage, this.pet);
+    }
+
+    updateAdvert(advert){
+        this.navCtrl.push(AdvertUpdatePage, advert);
     }
 }

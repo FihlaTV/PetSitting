@@ -1,0 +1,73 @@
+<!--CREER UNE ADVERT -->
+
+<ion-header>
+<ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Create your advert</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+	<ion-list radio-group [(ngModel)]="relationship">
+	    <ion-item>
+	        <ion-label>I am looking for a pet sitter</ion-label>
+	        <ion-radio value="looking" checked></ion-radio>
+	    </ion-item>
+
+	    <ion-item>
+	        <ion-label>I want to offer my services as a pet sitter</ion-label>
+	        <ion-radio value="offering"></ion-radio>
+	    </ion-item>
+
+	</ion-list>
+
+	<ion-item>
+	    <ion-label stacked>Title</ion-label>
+	    <ion-input type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>Location</ion-label>
+	    <ion-input type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>Description</ion-label>
+	    <ion-input type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>Price</ion-label>
+	    <ion-input type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>Date</ion-label>
+	    <ion-input type="Date"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>User ID</ion-label>
+	    <ion-input type="text"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label stacked>Pet ID</ion-label>
+	    <ion-input type="text" placeholder="only when looking for pet sitter"></ion-input>
+	</ion-item>
+
+	
+
+
+	<button ion-button large >
+	Create
+	</button>
+
+</ion-list>
+
+</ion-content>
