@@ -41,7 +41,8 @@ export class PetService {
         return this.http.post(petsURL + "create", pet);
     }
 
-    updateInfo(pet) {
+
+    updatePet(pet) {
         return this.http.post(petsURL + "update/" + pet.id, pet);
     }
 

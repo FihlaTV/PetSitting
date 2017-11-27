@@ -17,6 +17,7 @@ import {AdvertUpdatePage} from '../pages/advert-update/advert-update';
 
 import {PetDetailPage} from '../pages/pet-detail/pet-detail';
 import {PetUpdatePage} from '../pages/pet-update/pet-update';
+import {PetCreatePage} from '../pages/pet-create/pet-create';
 import {PetUserListPage} from '../pages/pet-user-list/pet-user-list';
 
 import {ProfileDetailPage} from '../pages/profile-detail/profile-detail';
@@ -45,6 +46,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AdvertUpdatePage,
     PetDetailPage,
     PetUpdatePage,
+    PetCreatePage,
     PetUserListPage,
     ProfileDetailPage,
     ProfileUpdatePage,
@@ -66,6 +68,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AdvertUpdatePage,
     PetDetailPage,
     PetUpdatePage,
+    PetCreatePage,
     PetUserListPage,
     ProfileDetailPage,
     ProfileUpdatePage,
