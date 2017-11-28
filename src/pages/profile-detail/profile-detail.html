@@ -18,6 +18,40 @@
 
         <h4>{{user.userName}}</h4>
 
+        <ion-list>
+
+            <ion-item>
+                <ion-icon item-left name="arrow-forward"></ion-icon>
+                <h3>Firstname</h3>
+                <p>{{user.firstName}}</p>
+            </ion-item>
+
+            <ion-item>
+                <ion-icon item-left name="arrow-forward"></ion-icon>
+                <h3>Lastname</h3>
+                <p>{{user.lastName}}</p>
+            </ion-item>
+
+            <ion-item>
+                <ion-icon item-left name="at"></ion-icon>
+                <h3>Email</h3>
+                <p>{{user.email}}</p>
+            </ion-item>
+
+            <ion-item>
+                <ion-icon item-left name="call"></ion-icon>
+                <h3>Phone</h3>
+                <p>{{user.phone}}</p>
+            </ion-item>
+
+            <ion-item text-wrap>
+                <ion-icon item-left name="create"></ion-icon>
+                <h3>Description</h3>
+                <p>{{user.description}}</p>
+            </ion-item>
+
+        </ion-list>
+<!--
 <div>
 	
 	<ion-item>
@@ -40,6 +74,7 @@
           Email adress:
           <ion-badge item-right>{{user.email}}</ion-badge>
     </ion-item>
+-->
 
    
     </div>
