@@ -16,7 +16,7 @@
     <ion-item-sliding *ngFor="let advert of adverts">
         <button ion-item (click)="openAdvertDetail(advert)">
             <ion-thumbnail item-left>
-                <img src="http://www.icone-png.com/png/13/12825.png"/>
+                <img src="{{getPetImage(advert.petId).image}}"/>/>
             </ion-thumbnail>
             <h2>{{advert.title}}</h2>
             <p>{{ advert.date | date: 'dd/MM/yyyy' }}</p>
