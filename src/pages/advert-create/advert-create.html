@@ -16,29 +16,29 @@
 	<ion-list radio-group [(ngModel)]="relationship">
 	    <ion-item>
 	        <ion-label>I am looking for a pet sitter</ion-label>
-	        <ion-radio value="looking" checked></ion-radio>
+	        <ion-radio value="1" checked></ion-radio>
 	    </ion-item>
 
 	    <ion-item>
 	        <ion-label>I want to offer my services as a pet sitter</ion-label>
-	        <ion-radio value="offering"></ion-radio>
+	        <ion-radio value="0"></ion-radio>
 	    </ion-item>
 
 	</ion-list>
 
 	<ion-item>
 	    <ion-label stacked>Title</ion-label>
-	    <ion-input type="text"[(ngModel)]="advert.title"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.title"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Location</ion-label>
-	    <ion-input type="text" [(ngModel)]="advert.location"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.description"></ion-input>
 	</ion-item>
 
 	<ion-item>
 	    <ion-label stacked>Description</ion-label>
-	    <ion-input type="text" [(ngModel)]="advert.description"></ion-input>
+	    <ion-input type="text" [(ngModel)]="advert.location"></ion-input>
 	</ion-item>
 
 	<ion-item>
@@ -53,7 +53,7 @@
 
 	<ion-item>
 	    <ion-label stacked>User ID</ion-label>
-	    <ion-input type="text"[(ngModel)]="advert.userId"></ion-input>
+	    <ion-input type="text"[(ngModel)]="advert.userId" placeholder="5a1c8a4e4bef81001481f512" disabled="disabled"></ion-input>
 	</ion-item>
 
 	<ion-item>
@@ -64,7 +64,7 @@
 	
 
 
-	<button ion-button large (click)="createAdvert(advert)">
+	<button ion-button full (click)="createAdvert(advert)">
 	Create
 	</button>
 

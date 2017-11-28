@@ -18,7 +18,7 @@ export class ProfileUpdatePage {
 
     constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public UserService: UserService, public toastCtrl: ToastController, public alertCtrl: AlertController) {
         this.user = this.navParams.data;
-        UserService.findById("5a104f9cf053ae624c001662").then(
+        UserService.findById("5a1c8a4e4bef81001481f512").then(
             user => this.user = user
         );
         this.UserService = UserService;

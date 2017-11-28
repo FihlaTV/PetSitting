@@ -28,7 +28,6 @@ export class AdvertCreatePage {
     createAdvert (advert){
         console.log(advert);
         this.AdvertService.createNewAdvert(advert);
-        this.navCtrl.setRoot(AdvertListPage);
-        
+        this.navCtrl.pop();    
     }
 }

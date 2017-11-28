@@ -18,7 +18,7 @@ export class PetUserListPage {
 
       
    constructor(public navCtrl: NavController, public service: PetService, public config: Config) {
-        /*this.service.findByOwnerId("5a104f9cf053ae624c001662")
+        /*this.service.findByOwnerId("5a1c8a4e4bef81001481f512")
             .then(data => this.pets = data);*/
         this.service.findAll()
             .then(data => this.pets = data);

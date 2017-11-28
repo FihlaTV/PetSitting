@@ -23,9 +23,8 @@ export class PetCreatePage {
     }
 
  	createPet(pet){
-    console.log(pet);
+    //console.log(pet);
  		this.PetService.createNewPet(pet);
-  	this.navCtrl.push(ProfileUpdatePage);
-
-  	}
+  	this.navCtrl.pop();
+  }
 }

@@ -24,11 +24,6 @@
         </ion-item>
 
         <ion-item>
-            <ion-label stacked>Birthday:</ion-label>
-            <ion-input type="date" [(ngModel)]="pet.birthDate"></ion-input>
-        </ion-item>
-
-        <ion-item>
             <ion-label stacked>Description:</ion-label>
             <ion-input type="text" [(ngModel)]="pet.description"></ion-input>
         </ion-item>
@@ -40,11 +35,11 @@
 
         <ion-item>
             <ion-label stacked>OwnerID:</ion-label>
-            <ion-input type="text" [(ngModel)]="pet.ownerId"></ion-input>
+            <ion-input type="text" [(ngModel)]="pet.ownerId" disabled="disabled"></ion-input>
         </ion-item>
 
         <button ion-button full (click)="updatePet(pet)">
-        Validate
+        Update
         </button>
         
     </ion-list>
