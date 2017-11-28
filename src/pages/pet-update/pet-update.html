@@ -38,9 +38,11 @@
             <ion-input type="text" [(ngModel)]="pet.ownerId" disabled="disabled"></ion-input>
         </ion-item>
 
-        <button ion-button full (click)="updatePet(pet)">
-        Update
-        </button>
+        <div text-center>
+            <button ion-button large (click)="updatePet(pet)">
+            Update
+            </button>
+        </div>
         
     </ion-list>
 
