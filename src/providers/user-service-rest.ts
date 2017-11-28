@@ -25,6 +25,6 @@ export class UserService {
     }
 
     updateInfo(user) {
-        return this.http.post(usersURL + "update/" + "5a104f9cf053ae624c001662", user).toPromise();
+        return this.http.post(usersURL + "update/" + "5a1c8a4e4bef81001481f512", user).toPromise();
     }
 }
