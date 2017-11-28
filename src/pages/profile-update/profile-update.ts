@@ -52,7 +52,7 @@ export class ProfileUpdatePage {
           text: 'Save',
           handler: data => {
             console.log('Saved clicked');
-          this.navCtrl.pop();
+          this.navCtrl.setRoot(ProfileUpdatePage);
           }
         }
       ]
