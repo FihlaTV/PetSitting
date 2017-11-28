@@ -67,9 +67,14 @@ export class AdvertListPage {
     }
 
     getPetImage(petId) {
-        return this.petService.findById("5a11fbc6e7ad1801f04efc30")
-            .then(pet => pet)
+       /* return this.petService.findById("5a11fbc6e7ad1801f04efc30")
+            .then(pet => this.pet)
+            .catch(error => alert(error));*/
+        this.petService.findById("5a11fbc6e7ad1801f04efc30")
+            .then(pet => this.pet)
             .catch(error => alert(error));
+        return this.pet.image;
+        //return "https://upload.wikimedia.org/wikipedia/commons/5/5d/Restless_flycatcher04.jpg";
     }
 
 
