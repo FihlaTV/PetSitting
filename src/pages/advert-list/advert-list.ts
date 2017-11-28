@@ -28,6 +28,11 @@ export class AdvertListPage {
         this.findAll();
     }
 
+    doRefresh(refresher) {
+        this.findAll();
+        refresher.complete();
+    }
+
     openAdvertDetail(advert: any) {
         this.navCtrl.push(AdvertDetailPage, advert);
     }

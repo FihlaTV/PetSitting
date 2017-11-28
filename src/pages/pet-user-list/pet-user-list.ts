@@ -24,6 +24,12 @@ export class PetUserListPage {
             .then(data => this.pets = data);
     }
 
+    doRefresh(refresher) {
+        this.service.findAll()
+            .then(data => this.pets = data);
+        refresher.complete();
+    }
+
     findAll() {
         this.service.findAll()
             .then(data => this.pets = data);
@@ -31,6 +37,8 @@ export class PetUserListPage {
 
     deleteItem(pet){
         this.service.delete(pet);
+        this.service.findAll()
+            .then(data => this.pets = data);
     }  
 
     createPet(){

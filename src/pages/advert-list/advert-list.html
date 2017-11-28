@@ -12,6 +12,13 @@
 </ion-header>
 
 <ion-content class="advert-list">
+
+    <ion-refresher (ionRefresh)="doRefresh($event);">
+        <ion-refresher-content 
+              pullingText="Pull to refresh"
+              refreshingSpinner="circles">
+        </ion-refresher-content>
+    </ion-refresher>
     
     <ion-item-sliding *ngFor="let advert of adverts">
         <button ion-item (click)="openAdvertDetail(advert)">
