@@ -47,9 +47,7 @@ export class PetService {
     }
 
     delete(pet) {
-        return this.http.delete(petsURL + "delete/" + pet.id).toPromise();
+        return this.http.post(petsURL + "delete/" + pet.id, pet).toPromise();
     }
-
-  
 }
 
