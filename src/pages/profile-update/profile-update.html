@@ -26,61 +26,56 @@
 
     </div>
 
-<div padding class="profile-info">
+    <div padding class="profile-info">
 
-<ion-list>
+        <ion-list>
 
-<ion-item>
-    <ion-label stacked>Username:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.userName"></ion-input>
-</ion-item>
+            <ion-item>
+                <ion-label stacked>Username:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.userName"></ion-input>
+            </ion-item>
 
-<ion-item>
-    <ion-label stacked>First Name:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
-</ion-item>
+            <ion-item>
+                <ion-label stacked>First Name:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
+            </ion-item>
 
-<ion-item>
-    <ion-label stacked>Last Name:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
-</ion-item>
+            <ion-item>
+                <ion-label stacked>Last Name:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
+            </ion-item>
 
-<ion-item>
-    <ion-label stacked>Phone Number:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.phoneNumber"></ion-input>
-</ion-item>
-
-
-<ion-item>
-    <ion-label stacked>Birth Date:</ion-label>
-    <ion-input type="Date" [(ngModel)]="user.birthDate"></ion-input>
-</ion-item>
+            <ion-item>
+                <ion-label stacked>Phone Number:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.phoneNumber"></ion-input>
+            </ion-item>
 
 
-<ion-item>
-    <ion-label stacked>Description:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.description"></ion-input>
-</ion-item>
+            <ion-item>
+                <ion-label stacked>Birth Date:</ion-label>
+                <ion-input type="Date" [(ngModel)]="user.birthDate"></ion-input>
+            </ion-item>
 
 
-<ion-item>
-    <ion-label stacked>Email Adress:</ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-</ion-item>  
-
-</ion-list>
+            <ion-item>
+                <ion-label stacked>Description:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.description"></ion-input>
+            </ion-item>
 
 
+            <ion-item>
+                <ion-label stacked>Email Adress:</ion-label>
+                <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+            </ion-item>  
 
-
-
+        </ion-list>
 
     </div>
 
     <div class="profile-footer">
-        <button ion-button large (click)="updateUserInfo(user)">
-Update
-</button>
+        <button ion-button full (click)="updateUserInfo(user)">
+        Update
+        </button>
     </div>
 
 

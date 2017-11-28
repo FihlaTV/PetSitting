@@ -24500,7 +24500,7 @@ profile-header {
   margin-right: 10px;
 }
 
-.profile-header {
+.pet-header {
   background-color: #434954;
   padding: 16px;
   width: 100%;
@@ -24508,19 +24508,19 @@ profile-header {
   text-align: center;
 }
 
-.profile-header img {
+.pet-header img {
   max-width: 200px;
   min-height: 115px;
   margin-left: -15px;
   padding: 25px 0 20px 0;
 }
 
-.profile-info p {
+.pet-info p {
   color: #697072;
   text-align: left;
 }
 
-.profile-info ion-icon {
+.pet-info ion-icon {
   color: #fca541;
   width: 20px;
 }
