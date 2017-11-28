@@ -4,8 +4,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
 import {AboutPage} from '../pages/about/about';
@@ -84,6 +83,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     UserService,
     AdvertService,
     PetService,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
